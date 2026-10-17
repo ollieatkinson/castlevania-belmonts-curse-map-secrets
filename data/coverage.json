@@ -1,0 +1,350 @@
+{
+  "rooms": 384,
+  "areas": [
+    "World_Biome_01_Streets_Poor",
+    "World_Biome_02_InnocentsCemetery",
+    "World_Biome_03_Catacombs",
+    "World_Biome_05_NotreDame",
+    "World_Biome_06_MainHall",
+    "World_Biome_08_Library",
+    "World_Biome_09_ClockTower",
+    "World_Biome_10_HallOfMirrors",
+    "World_Biome_11_MasterQuarter",
+    "World_Biome_12_MQBadEnding"
+  ],
+  "markers": {
+    "weapon": 25,
+    "arcana": 18,
+    "clue": 39,
+    "upgrade": 175,
+    "challenge": 73,
+    "health": 24,
+    "relic": 44,
+    "mana": 24,
+    "wall": 99,
+    "ability": 5,
+    "lore": 16,
+    "keepsake": 6,
+    "secret": 102,
+    "objective": 6,
+    "puzzle": 16
+  },
+  "native": 447,
+  "referenceLinked": {
+    "wall": 53,
+    "secret": 73,
+    "challenge": 35,
+    "lore": 7
+  },
+  "unverified": [
+    {
+      "siteId": 193753,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room21_uid108",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 194279,
+      "kind": "secret",
+      "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room20_uid129",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 194499,
+      "kind": "secret",
+      "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room12_uid120",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195052,
+      "kind": "secret",
+      "room": "World_Biome_06_MainHall_MainHall_Room_980_uid194",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195213,
+      "kind": "wall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_14_uid259",
+      "distance": 9.0026763950072,
+      "ambiguous": true
+    },
+    {
+      "siteId": 195238,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room19_uid118",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195250,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room03_uid101",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195330,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room06_uid104",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195332,
+      "kind": "wall",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
+      "distance": 15.909040404040312,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195354,
+      "kind": "challenge",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
+      "distance": 5.062575757575665,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195360,
+      "kind": "wall",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room41_uid131",
+      "distance": 6.847010238329293,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195376,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
+      "distance": 0.0,
+      "ambiguous": true
+    },
+    {
+      "siteId": 195450,
+      "kind": "secret",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room19_uid151",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195458,
+      "kind": "secret",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room19_uid151",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195470,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room10_uid108",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195513,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_170_uid150",
+      "distance": 18.010282273707816,
+      "ambiguous": true
+    },
+    {
+      "siteId": 195518,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
+      "distance": 14.581999037879683,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195521,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room12_uid110",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195525,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room38_uid128",
+      "distance": 0.0,
+      "ambiguous": true
+    },
+    {
+      "siteId": 195527,
+      "kind": "secret",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room30_uid118",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195615,
+      "kind": "secret",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room25_uid113",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195741,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195755,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room25_uid124",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195909,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 195999,
+      "kind": "challenge",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_18_uid263",
+      "distance": 22.824889121851186,
+      "ambiguous": true
+    },
+    {
+      "siteId": 196060,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196062,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196085,
+      "kind": "secret",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
+      "distance": 0.0,
+      "ambiguous": true
+    },
+    {
+      "siteId": 196120,
+      "kind": "secret",
+      "room": "World_Biome_08_Library_Library_MVP_Room_04_uid97",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196187,
+      "kind": "secret",
+      "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196456,
+      "kind": "secret",
+      "room": "World_Biome_08_Library_Library_MVP_Room_25_uid120",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196466,
+      "kind": "wall",
+      "room": "World_Biome_08_Library_Library_MVP_Room_31_uid127",
+      "distance": 0.0,
+      "ambiguous": true
+    },
+    {
+      "siteId": 196707,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room57_uid161",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 196834,
+      "kind": "objective",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_120_uid98",
+      "distance": 25.481078666839238,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197013,
+      "kind": "secret",
+      "room": "World_Biome_09_ClockTower_ClockTower_MVP_Room55_uid159",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197059,
+      "kind": "secret",
+      "room": "World_Biome_10_HallOfMirrors_HallOfMirrors_MVP_Room_08_uid106",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197083,
+      "kind": "secret",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
+      "distance": 25.46497381934413,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197126,
+      "kind": "secret",
+      "room": "World_Biome_10_HallOfMirrors_HallOfMirrors_MVP_Room_34_uid134",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197160,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room34_uid122",
+      "distance": 8.686606353098256,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197180,
+      "kind": "challenge",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room41_uid131",
+      "distance": 5.807535575177212,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197297,
+      "kind": "wall",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_175_uid105",
+      "distance": 0.0,
+      "ambiguous": true
+    },
+    {
+      "siteId": 197341,
+      "kind": "secret",
+      "room": "World_Biome_10_HallOfMirrors_HallOfMirrors_MVP_Room_24_uid123",
+      "distance": 0.0,
+      "ambiguous": false
+    },
+    {
+      "siteId": 197342,
+      "kind": "secret",
+      "room": "World_Biome_10_HallOfMirrors_HallOfMirrors_MVP_Room_24_uid123",
+      "distance": 0.0,
+      "ambiguous": false
+    }
+  ],
+  "unknownCompletion": {
+    "wall": 57,
+    "objective": 5,
+    "secret": 29,
+    "challenge": 35,
+    "puzzle": 14,
+    "lore": 9
+  }
+}
