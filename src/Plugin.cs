@@ -24,6 +24,7 @@ public sealed class Plugin : BasePlugin
     internal static ConfigEntry<bool> PanelExpanded = null!;
     internal static ConfigEntry<int> IconSize = null!;
     internal static ConfigEntry<bool> PanelVisible = null!;
+    internal static ConfigEntry<bool> HoverLabels = null!;
 
     internal static ConfigEntry<bool> RoomBell = null!;
     internal static ConfigEntry<float> BellVolume = null!;
@@ -43,6 +44,7 @@ public sealed class Plugin : BasePlugin
         HideCollected = Config.Bind("Filters", "HideCollected", true, "Hide collected upgrades and already discovered secret areas.");
         ShowUnexplored = Config.Bind("Filters", "ShowUnexplored", true, "Include destinations in rooms that have not been explored.");
         PanelVisible = Config.Bind("Display", "ShowControls", true, "Show the small Map Secrets controls on the area map. Hotkeys work even when hidden.");
+        HoverLabels = Config.Bind("Display", "MarkerTooltips", true, "Highlight visible markers and show their name when hovered with the mouse or map cursor.");
         PanelExpanded = Config.Bind("Display", "FiltersExpanded", false, "Expand the map filter controls. Toggle with F5.");
         IconSize = Config.Bind("Display", "IconSize", 40, new ConfigDescription("Marker size in pixels at 1080p.", new AcceptableValueRange<int>(12, 80)));
         using var stream = typeof(Plugin).Assembly.GetManifestResourceStream("MapAssist.markers.json")
@@ -68,7 +70,7 @@ internal static class MapOpened
 {
     private static void Postfix(UIMapLevelManager __instance)
     {
-        try { MapOverlay.Instance?.Attach(__instance.GetCurrentlyOpenedLevelMap()); }
+        try { MapOverlay.Instance?.Attach(__instance.GetCurrentlyOpenedLevelMap(), __instance); }
         catch (Exception e) { Plugin.Logger.LogError($"Could not display map markers: {e}"); }
     }
 }
@@ -99,5 +101,25 @@ internal static class PickupActivated
 [HarmonyPatch(typeof(MainCharacterSpawnLogic), nameof(MainCharacterSpawnLogic.Initialize))]
 internal static class ResetTransientPickups
 {
-    private static void Prefix() { SaveState.Reset(); RoomObserver.Instance?.Reset(); }
+    private static void Prefix() { MapOverlay.Instance?.Detach(); SaveState.Reset(); RoomObserver.Instance?.Reset(); }
+}
+
+// Close at the start of UI teardown, rather than waiting for an animation or
+// scene-unload completion callback that travel may bypass.
+[HarmonyPatch(typeof(UIMapManager), nameof(UIMapManager.OnMapClosed))]
+internal static class MapMenuClosed
+{
+    private static void Prefix() => MapOverlay.Instance?.Detach();
+}
+
+[HarmonyPatch(typeof(UIMapLevelManager), nameof(UIMapLevelManager.CloseLevelMap))]
+internal static class MapStartsClosing
+{
+    private static void Prefix() => MapOverlay.Instance?.Detach();
+}
+
+[HarmonyPatch(typeof(UIMapLevelManager), nameof(UIMapLevelManager.OnDisable))]
+internal static class MapUiDisabled
+{
+    private static void Prefix() => MapOverlay.Instance?.Detach();
 }

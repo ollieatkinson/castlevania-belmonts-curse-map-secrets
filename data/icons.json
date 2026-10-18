@@ -52,5 +52,9 @@
   "secret": {
     "guid": "844d5c930d1997341967b869363176ee",
     "type": "MapMarkerTypeDisplayData"
+  },
+  "experience": {
+    "guid": "7d0c2605a3552624b9418b293b1124c5",
+    "type": "Sprite"
   }
 }

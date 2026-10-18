@@ -128,8 +128,7 @@ public sealed class RoomObserver : MonoBehaviour
     {
         if (name.StartsWith("GPE_UpgradeCollectibleHealth", StringComparison.Ordinal)) return MarkerKind.Health;
         if (name.StartsWith("GPE_UpgradeCollectibleMana", StringComparison.Ordinal)) return MarkerKind.Mana;
-        if (name.StartsWith("GPE_DestructibleSourceExperience", StringComparison.Ordinal)
-            || name.StartsWith("GPE_ConsumableAtkUpBook", StringComparison.Ordinal)
+        if (name.StartsWith("GPE_ConsumableAtkUpBook", StringComparison.Ordinal)
             || name.StartsWith("GPE_ConsumableDefUpBook", StringComparison.Ordinal)) return MarkerKind.Upgrade;
         if (name.StartsWith("GPE_DestructibleWall", StringComparison.Ordinal)) return MarkerKind.Wall;
         return null;

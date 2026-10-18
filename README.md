@@ -2,7 +2,13 @@
 
 A separate BepInEx mod for Castlevania: Belmont's Curse. Adds configurable collectible, activity and hidden-path markers to the area map, using artwork and the serif font from your installed game.
 
-Version 0.1.1 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
+Version 0.1.2 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
+
+## Screenshots
+
+![Grim Token marker hover label](https://raw.githubusercontent.com/ollieatkinson/castlevania-belmonts-curse-map-secrets/trunk/docs/screenshots/marker-tooltip.png)
+
+[View the area map and filter-menu gallery](https://github.com/ollieatkinson/castlevania-belmonts-curse-map-secrets/tree/trunk/docs/screenshots).
 
 ## Install
 
@@ -16,13 +22,19 @@ Restart after replacing the DLL. The mod runs alongside Mirror Fast Travel. Remo
 
 Press **F5** on the area map. The native-style panel has three tabs:
 
-- **Items:** health hearts, mana hearts, other upgrades (ATK/DEF books and EXP statues), keepsakes, abilities, arcana, relics, weapons, clues.
+- **Items:** health hearts, mana hearts, attack/defence books, optional experience sources, keepsakes, abilities, arcana, relics, weapons, clues.
 - **Exploration:** challenge rooms, objectives, puzzles, lore, hidden paths, breakable walls.
-- **Options:** overlay, hide collected/found, unexplored rooms, uncertain locations, first-visit bell, marker size, reload configuration.
+- **Options:** overlay, hide collected/found, unexplored rooms, uncertain locations, first-visit bell, marker tooltips, marker size, reload configuration.
 
 Every category has its own persistent toggle, native icon and visible count. Existing choices are retained. New categories start disabled so you can choose what to reveal without crowding the map. F6 toggles the overlay, F7 health, F8 mana and F10 hidden paths. Marker size defaults to 40 pixels at 1080p, accepts 12–80, and scales with resolution. Markers keep their screen size while zooming and follow the selected area/sub-area.
 
 Settings are in `BepInEx/config/ollieatkinson.mapassist.cfg`. Edit it while the game runs, then click **Reload configuration** to apply changes.
+
+Hover a visible marker with the mouse or move the game's map cursor over it to see its name and category in a small native-font label. The marker gently enlarges and brightens. Labels distinguish permanent upgrades from experience sources and identify unknown completion states. Labels stay within the screen and hide over the filter panel, during confirmations, or when markers are filtered out. Disable **Marker tooltips** in Options if preferred.
+
+Experience sources have their own toggle, **off by default**. The 147 scene placements share a prefab save ID, so their collection state is unknown; the mod no longer presents those as permanent upgrades. **Attack / defence books** contains only the 28 permanent books.
+
+The panel and hover labels close when leaving the area map, including teleport/loading transitions and switching map views, even when preloaded map objects stay alive.
 
 ## Room updates and bell
 
@@ -72,4 +84,4 @@ python tools/extract_markers.py "/path/to/Castlevania Belmont's Curse" data/mark
 
 The pipeline caches local metadata in ignored `.build/catalog`, re-audits playable rooms, calibrates the attributed reference snapshot, and emits the marker catalog and coverage report. A game update also requires reviewing reference matches and completion mappings before publishing.
 
-To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.1` with `GamePath` set. Nothing is published automatically by building or installing.
+To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.2` with `GamePath` set. Nothing is published automatically by building or installing.

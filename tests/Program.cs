@@ -61,4 +61,17 @@ Reject(new MarkerCatalog { Schema = 3, GameAssemblySha256 = new string('a', 64) 
 Reject(new MarkerCatalog { Schema = 2, GameAssemblySha256 = new string('a', 64), Markers = new() { catalog.Markers[0], catalog.Markers[0] } });
 Reject(new MarkerCatalog { Schema = 2, GameAssemblySha256 = new string('a', 64), Markers = new() { new PickupMarker { Id = "test", Kind = "other", World = "World", Room = "World_Room" } } });
 Reject(new MarkerCatalog { Schema = 2, GameAssemblySha256 = new string('a', 64), Markers = new() { new PickupMarker { Id = "test", Kind = "secret", State = "secret", World = "World", Room = "World_Room" } } });
+var titles = catalog.Markers.Select(marker => MarkerLabels.Title(marker, catalog.Items)).ToArray();
+Check(titles.All(label => !string.IsNullOrWhiteSpace(label) && !label.Contains('_') && !label.Contains("(Clone)")), "A tooltip exposes an internal object name.");
+Check(catalog.Markers.Count(m => m.Category == MarkerKind.Upgrade) == 28, "Only permanent attack/defence books belong under upgrades.");
+Check(catalog.Markers.Where(m => m.Category == MarkerKind.Upgrade).All(m => m.Symbol is "attack" or "defence"), "Experience sources leaked into permanent upgrades.");
+Check(catalog.Markers.Count(m => m.Category == MarkerKind.Experience) == 147, "Experience-source coverage changed.");
+Check(catalog.Markers.Where(m => m.Category == MarkerKind.Experience).All(m => m.SaveId == "" && m.State == "unknown"), "Shared prefab IDs must never be used to infer experience collection.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "mana", Name = "GPE_UpgradeCollectibleMana (1)" }, catalog.Items) == "Mana Heart", "Mana hover name must be readable.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "upgrade", Symbol = "attack" }, catalog.Items) == "Attack Upgrade", "Attack book hover name is incorrect.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "upgrade", Symbol = "defence" }, catalog.Items) == "Defence Upgrade", "Defence book hover name is incorrect.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "experience", Name = "GPE_DestructibleSourceExperience(Clone)" }, catalog.Items) == "Experience Source", "Experience hover name is incorrect.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "secret", Name = "Illusory Wall" }, catalog.Items) == "Illusory Wall", "Passage tooltip lost its type.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "ability", ItemId = "DoubleJump", Name = "GPE_Reward" }, catalog.Items) == catalog.Items["DoubleJump"].Name, "Tooltip should fall back to the game item name.");
+Check(MarkerLabels.Title(new PickupMarker { Kind = "lore", Name = "" }, catalog.Items) == "Lore", "Unnamed lore must have a category label.");
 Console.WriteLine($"Passed {checks} checks: {catalog.Markers.Count} markers, {catalog.Areas.Count} areas, {Enum.GetValues<MarkerKind>().Length} categories.");

@@ -16,8 +16,9 @@
     "weapon": 25,
     "arcana": 18,
     "clue": 39,
-    "upgrade": 175,
+    "upgrade": 28,
     "challenge": 73,
+    "experience": 147,
     "health": 24,
     "relic": 44,
     "mana": 24,
@@ -340,6 +341,7 @@
     }
   ],
   "unknownCompletion": {
+    "experience": 147,
     "wall": 57,
     "objective": 5,
     "secret": 29,

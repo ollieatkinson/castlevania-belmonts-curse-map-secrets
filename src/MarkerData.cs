@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace MapAssist;
 
-internal enum MarkerKind { Health, Mana, Upgrade, Keepsake, Ability, Arcana, Relic, Weapon, Clue, Challenge, Objective, Puzzle, Lore, Secret, Wall }
+internal enum MarkerKind { Health, Mana, Upgrade, Experience, Keepsake, Ability, Arcana, Relic, Weapon, Clue, Challenge, Objective, Puzzle, Lore, Secret, Wall }
 internal enum CollectionState { Uncollected, Collected, Unknown }
 
 internal sealed class MarkerCatalog

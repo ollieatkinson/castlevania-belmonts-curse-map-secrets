@@ -38,7 +38,9 @@ for room,r in sorted(ROOMS.items()):
  for o in r['objects']:
   n=o['name'];save=o['id'] or ''
   if save and n.startswith(('GPE_UpgradeCollectibleHealth','GPE_UpgradeCollectibleMana','GPE_ConsumableAtkUpBook','GPE_ConsumableDefUpBook','GPE_DestructibleSourceExperience')):
-   kind='health' if 'CollectibleHealth' in n else 'mana' if 'CollectibleMana' in n else 'upgrade';m=add(r,kind,o['x'],o['y'],save=save,name=n)
+   kind='health' if 'CollectibleHealth' in n else 'mana' if 'CollectibleMana' in n else 'experience' if 'SourceExperience' in n else 'upgrade'
+   # Experience-source clones reuse one prefab ID across all placements. It is not a unique collection key.
+   m=add(r,kind,o['x'],o['y'],save='' if kind=='experience' else save,state='unknown' if kind=='experience' else 'activated',name=n)
    if 'AtkUp' in n:m['symbol']='attack'
    elif 'DefUp' in n:m['symbol']='defence'
   if save and n.startswith('GPE_EncounterGate_MainEntity'):add(r,'challenge',o['x'],o['y'],save=save,state='encounter',name='Combat room')

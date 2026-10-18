@@ -1,5 +1,6 @@
 using Il2CppInterop.Runtime.Attributes;
 using MotherBase.RoomDesigner;
+using MotherBase.ApplicationFlowManager;
 using RedWine.ResourceManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,12 +12,20 @@ public sealed class MapOverlay : MonoBehaviour
 {
     internal static MapOverlay? Instance;
     private LevelMap? map;
+    private UIMapLevelManager? mapUi;
     private GameObject? root;
     private Material? markerMaterial;
     private readonly List<MarkerVisual> markers = new();
     private readonly MarkerIcons icons = new();
     private FilterMenu? menu;
+    private MarkerTooltip? tooltip;
+    private MapProjection? projection;
+    private MarkerVisual? hovered;
+    private float hoverStarted;
+    private bool pointerMode;
+    private bool hoverUnavailable;
     private float nextRefresh;
+    private bool presentationSuspended;
     private readonly Dictionary<MarkerKind, int> counts = new();
 
     public MapOverlay(IntPtr pointer) : base(pointer) { }
@@ -26,13 +35,14 @@ public sealed class MapOverlay : MonoBehaviour
     {
         Detach();
         menu?.Dispose();
+        tooltip?.Dispose();
         icons.Dispose();
         if (markerMaterial) Object.Destroy(markerMaterial);
         Instance = null;
     }
 
     [HideFromIl2Cpp]
-    internal void Attach(LevelMap? levelMap)
+    internal void Attach(LevelMap? levelMap, UIMapLevelManager? owner = null)
     {
         Detach();
         if (!levelMap || !levelMap!.context || !levelMap.mapCamera || !levelMap.mapCamera.mapCamera) return;
@@ -43,6 +53,17 @@ public sealed class MapOverlay : MonoBehaviour
         var world = ResourceManager.LoadAssetByRef<WorldData>(ResourceContext.UI_GAMEMENU, reference);
         if (!world) return;
         map = levelMap;
+        presentationSuspended = false;
+        var mapManager = UIMapManager.Get();
+        mapUi = owner ? owner : mapManager ? mapManager.levelManager : null;
+        projection = new MapProjection(levelMap.mapCamera.mapCamera, mapUi ? mapUi!.levelMapImage : null);
+        pointerMode = Cursor.visible;
+        hoverUnavailable = false;
+        if (tooltip == null)
+        {
+            try { tooltip = new MarkerTooltip(transform); }
+            catch (Exception e) { hoverUnavailable = true; Plugin.Logger.LogWarning($"Marker labels unavailable; map filters remain active: {e.Message}"); }
+        }
         // The controls must not depend on every marker's artwork loading.
         if (menu == null)
         {
@@ -131,18 +152,39 @@ public sealed class MapOverlay : MonoBehaviour
             Object.Destroy(root);
         }
         menu?.Refresh(false, counts);
+        tooltip?.Hide();
+        hovered = null;
+        projection = null;
         markers.Clear();
         root = null;
         map = null;
+        mapUi = null;
         counts.Clear();
     }
 
     public void Update()
     {
-        if (!map) return;
+        // Real close/loading callbacks own attachment. A preloaded map or UI
+        // image can be temporarily inactive while opening; do not discard its
+        // markers based on unrelated game-menu or intermediate UI state.
+        if (!map) { Detach(); return; }
         try
         {
-            if (!map!.gameObject.activeInHierarchy) { Detach(); return; }
+            var current = map!;
+            if (ApplicationFlowManager.IsLoading) { Detach(); return; }
+            if (!current.gameObject.activeInHierarchy)
+            {
+                if (!presentationSuspended) Plugin.Logger.LogInfo("Map overlay paused while its map is inactive; keeping markers for reactivation.");
+                presentationSuspended = true;
+                if (root) root!.SetActive(false);
+                menu?.Refresh(false, counts);
+                ClearHover();
+                return;
+            }
+            if (presentationSuspended) Plugin.Logger.LogInfo("Map overlay resumed after map activation.");
+            presentationSuspended = false;
+            if (root) root!.SetActive(true);
+            var ui = UIManager.GetInstance();
             var keyboard = Keyboard.current;
             if (keyboard != null)
             {
@@ -157,18 +199,34 @@ public sealed class MapOverlay : MonoBehaviour
                 if (keyboard.f8Key.wasPressedThisFrame) Plugin.Mana.Value = !Plugin.Mana.Value;
                 if (keyboard.f10Key.wasPressedThisFrame) Plugin.Secrets.Value = !Plugin.Secrets.Value;
             }
-            var ui = UIManager.GetInstance();
             var popupVisible = ui && ui.confirmationPopup && ui.confirmationPopup.visible;
             menu?.Refresh(Plugin.PanelVisible.Value && !popupVisible, counts);
-            var camera = map.mapCamera.mapCamera;
+            var camera = current.mapCamera.mapCamera;
             var scale = camera.orthographicSize * 2f / Mathf.Max(camera.pixelHeight, 1)
                 * Plugin.IconSize.Value * Mathf.Clamp(Screen.height / 1080f, 0.75f, 2.5f);
-            foreach (var marker in markers)
-                if (marker.Object) marker.Object.transform.localScale = new Vector3(scale, scale, scale);
             if (Time.unscaledTime >= nextRefresh)
             {
                 nextRefresh = Time.unscaledTime + 0.2f;
                 RefreshVisibility();
+            }
+            // Optional hover UI must never disable markers or the F5 controls.
+            try { UpdateHover(popupVisible); }
+            catch (Exception e)
+            {
+                hovered = null;
+                tooltip?.Hide();
+                if (!hoverUnavailable) Plugin.Logger.LogWarning($"Marker hover disabled until the next map opening: {e.Message}");
+                hoverUnavailable = true;
+            }
+            foreach (var marker in markers)
+            {
+                if (!marker.Object || !marker.Object.activeInHierarchy) continue;
+                marker.Highlight = Mathf.MoveTowards(marker.Highlight, marker == hovered ? 1f : 0f, Time.unscaledDeltaTime * 9f);
+                var size = scale * (1f + marker.Highlight * 0.14f);
+                marker.Object.transform.localScale = new Vector3(size, size, size);
+                var color = Color.Lerp(Color.white, new Color(1f, 0.9f, 0.68f, 1f), marker.Highlight * 0.55f);
+                color.a = marker.Collected == CollectionState.Collected ? 0.35f : 1f;
+                foreach (var renderer in marker.Renderers) if (renderer) renderer.color = color;
             }
         }
         catch (Exception e)
@@ -195,12 +253,58 @@ public sealed class MapOverlay : MonoBehaviour
                 && MarkerRules.ShouldShow(enabled, Plugin.HideCollected.Value, collected,
                     Plugin.ShowUnexplored.Value, SaveState.IsRoomExplored(explorer, marker.Room));
             marker.Object.SetActive(visible);
-            if (!visible) continue;
-            foreach (var renderer in marker.Renderers)
-                renderer.color = collected == CollectionState.Collected ? new Color(1f, 1f, 1f, 0.35f) : Color.white;
+            marker.Collected = collected;
+            if (!visible) { marker.Highlight = 0; continue; }
             counts[marker.Kind] = counts.GetValueOrDefault(marker.Kind) + 1;
         }
     }
+
+    [HideFromIl2Cpp]
+    private void UpdateHover(bool popupVisible)
+    {
+        if (hoverUnavailable || !Plugin.HoverLabels.Value || popupVisible || !map || projection == null
+            || !map!.controller || !map.controller.AreControlsEnabled()) { ClearHover(); return; }
+        var mouse = Mouse.current;
+        var pad = Gamepad.current;
+        var keyboard = Keyboard.current;
+        if ((pad != null && (pad.leftStick.ReadValue().sqrMagnitude > 0.04f || pad.rightStick.ReadValue().sqrMagnitude > 0.04f))
+            || (keyboard != null && (keyboard.wKey.isPressed || keyboard.aKey.isPressed || keyboard.sKey.isPressed || keyboard.dKey.isPressed
+                || keyboard.upArrowKey.isPressed || keyboard.downArrowKey.isPressed || keyboard.leftArrowKey.isPressed || keyboard.rightArrowKey.isPressed)))
+            pointerMode = false;
+        if (mouse != null && Cursor.visible && (mouse.delta.ReadValue().sqrMagnitude > 1f || mouse.leftButton.wasPressedThisFrame)) pointerMode = true;
+        Vector2 pointer;
+        if (pointerMode && mouse != null && Cursor.visible) pointer = mouse.position.ReadValue();
+        else
+        {
+            var cursor = map.controller.cursor;
+            if (!cursor || !cursor.gameObject.activeInHierarchy || !projection.TryScreenPoint(cursor.transform.position, out pointer)) { ClearHover(); return; }
+        }
+        if (menu?.ContainsScreenPoint(pointer) == true) { ClearHover(); return; }
+        var radius = Mathf.Max(16f, Plugin.IconSize.Value * 0.6f) * Mathf.Clamp(Screen.height / 1080f, 0.75f, 2.5f);
+        var bestDistance = radius * radius;
+        MarkerVisual? best = null;
+        var anchor = Vector2.zero;
+        foreach (var marker in markers)
+        {
+            if (!marker.Object || !marker.Object.activeInHierarchy || marker.Pickup == null
+                || !projection.TryScreenPoint(marker.Object.transform.position, out var screen)) continue;
+            var distance = (screen - pointer).sqrMagnitude;
+            if (distance > bestDistance || (best != null && distance == bestDistance && marker != hovered)) continue;
+            bestDistance = distance; best = marker; anchor = screen;
+        }
+        if (best != hovered) { hovered = best; hoverStarted = Time.unscaledTime; tooltip?.Hide(); }
+        if (best?.Pickup == null) { ClearHover(); return; }
+        if (Time.unscaledTime - hoverStarted < 0.18f) return;
+        var title = MarkerLabels.Title(best.Pickup, Plugin.Catalog.Items);
+        var category = MarkerLabels.Category(best.Kind);
+        if (!best.Pickup.Verified) category += " · Approximate location";
+        if (best.Collected == CollectionState.Collected) category += " · Collected";
+        else if (best.Collected == CollectionState.Unknown) category += " · Completion unknown";
+        tooltip?.Show(title, category, anchor);
+    }
+
+    [HideFromIl2Cpp]
+    private void ClearHover() { hovered = null; tooltip?.Hide(); }
 
     [HideFromIl2Cpp]
     internal void RefreshNow() { if (map) RefreshVisibility(); }
@@ -210,9 +314,14 @@ public sealed class MapOverlay : MonoBehaviour
     {
         // Rebuild to include/exclude unverified reference locations immediately.
         var current = map;
-        if (current) Attach(current);
+        var owner = mapUi;
+        if (current) Attach(current, owner);
     }
 
     private sealed record MarkerVisual(GameObject Object, SpriteRenderer[] Renderers, MarkerKind Kind,
-        string Room, LevelMapNavigationZone? Zone, PickupMarker? Pickup, int SecretId);
+        string Room, LevelMapNavigationZone? Zone, PickupMarker? Pickup, int SecretId)
+    {
+        internal float Highlight;
+        internal CollectionState Collected;
+    }
 }

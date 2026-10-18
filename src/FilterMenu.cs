@@ -93,8 +93,8 @@ internal sealed class FilterMenu
             for (var i = 0; i < Categories.All.Length; i++)
             {
                 var entry = Categories.All[i];
-                var which = i < 9 ? 0 : 1;
-                Row(pages[which].transform, 126 + (which == 0 ? i : i - 9) * 36, Categories.Settings[entry.Kind], entry.Label, entry.Key, entry.Kind);
+                var which = i < 10 ? 0 : 1;
+                Row(pages[which].transform, 122 + (which == 0 ? i : i - 10) * 34, Categories.Settings[entry.Kind], entry.Label, entry.Key, entry.Kind);
             }
             var options = pages[2].transform;
             Row(options, 126, Plugin.Enabled, "Show markers", "F6");
@@ -102,13 +102,14 @@ internal sealed class FilterMenu
             Row(options, 198, Plugin.ShowUnexplored, "Unexplored rooms", "");
             Row(options, 234, Plugin.Unverified, "Unverified locations", "");
             Row(options, 270, Plugin.RoomBell, "First-visit bell", "");
-            sizeLabel = Text(options, "", 24, 320, 260, 32, 21, Parchment);
-            var smaller = Button(options, "Smaller markers", 294, 320, 40, 32, () => Plugin.IconSize.Value = Mathf.Max(12, Plugin.IconSize.Value - 4));
+            Row(options, 306, Plugin.HoverLabels, "Marker tooltips", "");
+            sizeLabel = Text(options, "", 24, 350, 260, 32, 21, Parchment);
+            var smaller = Button(options, "Smaller markers", 294, 350, 40, 32, () => Plugin.IconSize.Value = Mathf.Max(12, Plugin.IconSize.Value - 4));
             Text(smaller, "-", 0, 0, 40, 32, 25, Gold).alignment = TextAlignmentOptions.Midline;
-            var bigger = Button(options, "Larger markers", 344, 320, 40, 32, () => Plugin.IconSize.Value = Mathf.Min(80, Plugin.IconSize.Value + 4));
+            var bigger = Button(options, "Larger markers", 344, 350, 40, 32, () => Plugin.IconSize.Value = Mathf.Min(80, Plugin.IconSize.Value + 4));
             Text(bigger, "+", 0, 0, 40, 32, 25, Gold).alignment = TextAlignmentOptions.Midline;
-            Text(options, "Bell sounds only for enabled categories.", 24, 370, 360, 26, 18, Parchment);
-            Text(options, "Unverified locations may remain after discovery.", 24, 402, 360, 48, 17, Parchment).enableWordWrapping = true;
+            Text(options, "Bell sounds only for enabled categories.", 24, 390, 360, 26, 18, Parchment);
+            Text(options, "Unverified locations may remain after discovery.", 24, 420, 360, 48, 17, Parchment).enableWordWrapping = true;
             for (var i = 0; i < pages.Length; i++)
             {
                 Rule(pages[i].transform, 18, 476, 374, 1);
@@ -142,6 +143,9 @@ internal sealed class FilterMenu
             if (row.Count && row.Kind.HasValue) row.Count!.text = counts.TryGetValue(row.Kind.Value, out var count) ? count.ToString() : "0";
         }
     }
+
+    internal bool ContainsScreenPoint(Vector2 point) => root && root.activeInHierarchy
+        && RectTransformUtility.RectangleContainsScreenPoint(panel, point, null);
 
     internal void Dispose() { if (root) Object.Destroy(root); }
 

@@ -6,7 +6,7 @@ internal static class Categories
 {
     internal static readonly (MarkerKind Kind, string Label, string Key)[] All = {
         (MarkerKind.Health, "Health hearts", "F7"), (MarkerKind.Mana, "Mana hearts", "F8"),
-        (MarkerKind.Upgrade, "Other upgrades", ""), (MarkerKind.Keepsake, "Keepsakes", ""),
+        (MarkerKind.Upgrade, "Attack / defence books", ""), (MarkerKind.Experience, "Experience sources", ""), (MarkerKind.Keepsake, "Keepsakes", ""),
         (MarkerKind.Ability, "Abilities", ""), (MarkerKind.Arcana, "Arcana", ""),
         (MarkerKind.Relic, "Relics", ""), (MarkerKind.Weapon, "Weapons", ""), (MarkerKind.Clue, "Clues", ""),
         (MarkerKind.Challenge, "Challenge rooms", ""), (MarkerKind.Objective, "Objectives", ""),
