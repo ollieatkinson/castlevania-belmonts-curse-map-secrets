@@ -99,3 +99,13 @@ internal sealed class FirstVisitTracker
         return visited.Add(room) && !previouslyExplored;
     }
 }
+
+internal static class MarkerCoordinates
+{
+    // Catalog positions are relative to RoomInstance.root (the canonical chunk
+    // origin). WorldRoomData.GetWorldPosition includes the editor offset used to
+    // load the scene container, so it must not be used as this origin.
+    internal static (float X, float Y) ToWorld(float localX, float localY,
+        int roomChunkX, int roomChunkY, float chunkWidth, float chunkHeight)
+        => (roomChunkX * chunkWidth + localX, roomChunkY * chunkHeight + localY);
+}

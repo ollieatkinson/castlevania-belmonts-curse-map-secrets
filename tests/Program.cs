@@ -74,4 +74,16 @@ Check(MarkerLabels.Title(new PickupMarker { Kind = "experience", Name = "GPE_Des
 Check(MarkerLabels.Title(new PickupMarker { Kind = "secret", Name = "Illusory Wall" }, catalog.Items) == "Illusory Wall", "Passage tooltip lost its type.");
 Check(MarkerLabels.Title(new PickupMarker { Kind = "ability", ItemId = "DoubleJump", Name = "GPE_Reward" }, catalog.Items) == catalog.Items["DoubleJump"].Name, "Tooltip should fall back to the game item name.");
 Check(MarkerLabels.Title(new PickupMarker { Kind = "lore", Name = "" }, catalog.Items) == "Lore", "Unnamed lore must have a category label.");
+// Regression: these scene containers have editor offsets. The catalog already
+// measures from their offset root, so those offsets must not shift the map pins.
+var mainHallMana = catalog.Markers.Single(m => m.SaveId == "20b45d3a-d20b-4c0c-80f6-d5f26520989a");
+var heartPosition = MarkerCoordinates.ToWorld(mainHallMana.X, mainHallMana.Y, 15, 4, 24, 13);
+Check(Math.Abs(heartPosition.X - 402f) < 0.001f && Math.Abs(heartPosition.Y - 51f) < 0.001f,
+    "The Main Hall mana heart was shifted down by its scene editor offset.");
+var mainHallEye = catalog.Markers.Single(m => m.Id == "reference:195183");
+var eyePosition = MarkerCoordinates.ToWorld(mainHallEye.X, mainHallEye.Y, 19, 4, 24, 13);
+Check(Math.Abs(eyePosition.X - 493.5075f) < 0.001f && Math.Abs(eyePosition.Y - 83.6289f) < 0.001f,
+    "The Main Hall eye was shifted down by three chunks.");
+var unaffected = MarkerCoordinates.ToWorld(23f, 8.5f, 15, -8, 24, 13);
+Check(unaffected == (383f, -95.5f), "A room with no editor offset must keep its existing coordinates.");
 Console.WriteLine($"Passed {checks} checks: {catalog.Markers.Count} markers, {catalog.Areas.Count} areas, {Enum.GetValues<MarkerKind>().Length} categories.");

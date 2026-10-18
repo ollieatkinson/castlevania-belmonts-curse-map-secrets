@@ -87,8 +87,9 @@ public sealed class MapOverlay : MonoBehaviour
             foreach (var pickup in Plugin.Catalog.Markers)
             {
                 if ((!pickup.Verified && !Plugin.Unverified.Value) || !rooms.TryGetValue(pickup.Room, out var room)) continue;
-                var origin = room.GetWorldPosition(world.worldSettings);
-                var position = origin + new Vector3(pickup.X, pickup.Y, 0f);
+                var point = MarkerCoordinates.ToWorld(pickup.X, pickup.Y, room.positionCoord.x, room.positionCoord.y,
+                    world.worldSettings.chunkWidth, world.worldSettings.chunkHeight);
+                var position = new Vector3(point.X, point.Y, 0f);
                 var zone = levelMap.context.settings.navigationZonesManager.GetNavigationZoneAtPosition(position);
                 if (!zone)
                 {

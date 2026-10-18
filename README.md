@@ -2,7 +2,7 @@
 
 A separate BepInEx mod for Castlevania: Belmont's Curse. Adds configurable collectible, activity and hidden-path markers to the area map, using artwork and the serif font from your installed game.
 
-Version 0.1.2 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
+Version 0.1.3 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
 
 ## Screenshots
 
@@ -54,6 +54,8 @@ Collected inventory items, activated pickups, completed encounters and matched s
 
 Ability-based reachability filtering is not implemented. No personal map-marker slots are used.
 
+Scene editor offsets are excluded from map placement: marker coordinates are measured from each room’s canonical chunk origin, rather than its scene-loading container.
+
 ## Build, package and validate
 
 Run the game with BepInEx once to generate interop assemblies, then use the .NET 8 SDK:
@@ -84,4 +86,4 @@ python tools/extract_markers.py "/path/to/Castlevania Belmont's Curse" data/mark
 
 The pipeline caches local metadata in ignored `.build/catalog`, re-audits playable rooms, calibrates the attributed reference snapshot, and emits the marker catalog and coverage report. A game update also requires reviewing reference matches and completion mappings before publishing.
 
-To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.2` with `GamePath` set. Nothing is published automatically by building or installing.
+To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.3` with `GamePath` set. Nothing is published automatically by building or installing.
