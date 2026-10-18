@@ -2,7 +2,7 @@
 
 A separate BepInEx mod for Castlevania: Belmont's Curse. Adds configurable collectible, activity and hidden-path markers to the area map, using artwork and the serif font from your installed game.
 
-Version 0.1.0 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
+Version 0.1.1 audits 384 playable room scenes across all 10 world variants, including sub-areas. The catalog has 672 marker placements. The alternate ending area was audited and has no relevant collectible placements. See the coverage and completion limits below.
 
 ## Install
 
@@ -54,6 +54,14 @@ dotnet run --project tests/MapAssist.Tests.csproj -c Release
 
 Plugin and standalone ZIPs with checksums are written to `dist/`. The standalone uses pinned BepInEx 788 with dependency licenses and corresponding sources. Game assemblies, artwork, fonts, saves and metadata caches are not packaged.
 
+Icon asset types and sprite names can be checked against the installed game with UnityPy:
+
+```sh
+python tools/validate_icons.py "/path/to/Castlevania Belmont's Curse"
+```
+
+The filter menu opens independently of marker artwork. If a game asset cannot load, its marker uses the native eye as a fallback; that marker alone is omitted if the fallback is also unavailable. F5 restores the panel even if `ShowControls` was disabled.
+
 The marker catalog is matched to the SHA-256 hash of `GameAssembly.dll`. Unsupported builds disable the mod and log the reason to `BepInEx/LogOutput.log`.
 
 To regenerate the audit and coverage after a game update, install Python 3.11+ and UnityPy:
@@ -64,4 +72,4 @@ python tools/extract_markers.py "/path/to/Castlevania Belmont's Curse" data/mark
 
 The pipeline caches local metadata in ignored `.build/catalog`, re-audits playable rooms, calibrates the attributed reference snapshot, and emits the marker catalog and coverage report. A game update also requires reviewing reference matches and completion mappings before publishing.
 
-To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.0` with `GamePath` set. Nothing is published automatically by building or installing.
+To publish a tested version, commit and push the reviewed changes, then run `scripts/release.sh v0.1.1` with `GamePath` set. Nothing is published automatically by building or installing.

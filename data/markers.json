@@ -11211,7 +11211,7 @@
     "UniqueItemID": {
       "kind": "relic",
       "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
-      "iconName": "T_UI_Equipment_GenericCharmIcon",
+      "iconName": "T_UI_Items_GenericCharmIcon",
       "name": "Lorem Ipsum"
     },
     "AerialDash": {

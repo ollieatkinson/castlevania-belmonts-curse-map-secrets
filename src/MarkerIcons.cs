@@ -1,4 +1,5 @@
 using RedWine.ResourceManagement;
+using System.Text.Json;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.U2D;
@@ -6,95 +7,131 @@ using Object = UnityEngine.Object;
 
 namespace MapAssist;
 
-// Borrow the game's art at runtime. Only SpriteAtlas.GetSprite clones belong to us;
-// their textures and the eye sprite remain owned by the game's resource manager.
+// Assets stay owned by the game. We own only atlas clones and Sprite wrappers
+// around the game's Texture2D-only book artwork, never their textures.
 internal sealed class MarkerIcons
 {
-    private readonly Dictionary<MarkerKind, Sprite[]> icons = new();
-    private readonly List<Sprite> atlasClones = new();
-    private readonly AssetReference heartsReference = new("24161bd6821b99e409dd9a0a415d16ea");
+    private sealed class NativeIcon
+    {
+        public string Guid { get; set; } = "";
+        public string Type { get; set; } = "";
+        public string[] Names { get; set; } = Array.Empty<string>();
+    }
 
-    private readonly Dictionary<string, Sprite[]> itemIcons = new();
+    private readonly Dictionary<string, NativeIcon> assets;
+    private readonly Dictionary<string, Sprite[]> cache = new();
+    private readonly List<Sprite> ownedSprites = new();
     private readonly List<AssetReference> references = new();
+    private readonly HashSet<string> failures = new();
+
+    internal MarkerIcons()
+    {
+        using var stream = typeof(Plugin).Assembly.GetManifestResourceStream("MapAssist.icons.json")
+            ?? throw new InvalidDataException("Native icon references are missing.");
+        assets = JsonSerializer.Deserialize<Dictionary<string, NativeIcon>>(stream,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
+            ?? throw new InvalidDataException("Native icon references are invalid.");
+    }
 
     internal Sprite[] Get(PickupMarker marker)
     {
-        if (!string.IsNullOrEmpty(marker.Symbol)) return LoadSprite(marker.Symbol,
-            marker.Symbol == "attack" ? "b0e5b33781665c1459403febed86c93b" : "9d6e9631387862842ab4378528d9aa88");
-        if (Plugin.Catalog.Items.TryGetValue(marker.ItemId, out var item) && !string.IsNullOrEmpty(item.IconGuid))
+        try
         {
-            try { return LoadSprite(marker.ItemId, item.IconGuid, item.IconName); }
-            catch (Exception e) { Plugin.Logger.LogWarning($"Using category icon for {marker.ItemId}: {e.Message}"); }
+            if (!string.IsNullOrEmpty(marker.Symbol)) return Load(marker.Symbol, assets[marker.Symbol]);
+            if (Plugin.Catalog.Items.TryGetValue(marker.ItemId, out var item) && !string.IsNullOrEmpty(item.IconGuid))
+                return Load("item:" + marker.ItemId, new NativeIcon { Guid = item.IconGuid, Type = "Sprite", Names = string.IsNullOrEmpty(item.IconName) ? Array.Empty<string>() : new[] { item.IconName } });
         }
+        catch (Exception e) { WarnOnce("item:" + marker.ItemId + ":" + marker.Symbol, e); }
         return Get(marker.Category);
-    }
-
-    private Sprite[] LoadSprite(string key, string guid, string subName = "")
-    {
-        if (itemIcons.TryGetValue(key, out var found) && found.All(sprite => sprite)) return found;
-        var reference = new AssetReferenceSprite(guid);
-        if (!string.IsNullOrEmpty(subName)) reference.SubObjectName = subName;
-        var sprite = ResourceManager.LoadAssetByRef<Sprite>(ResourceContext.Always, reference);
-        if (!sprite) throw new InvalidOperationException($"Native sprite {key} is unavailable.");
-        references.Add(reference);
-        return itemIcons[key] = new[] { sprite };
     }
 
     internal Sprite[] Get(MarkerKind kind)
     {
-        if (icons.TryGetValue(kind, out var cached) && cached.All(sprite => sprite)) return cached;
-        if (kind is not (MarkerKind.Health or MarkerKind.Mana))
+        var key = "category:" + kind;
+        if (cache.TryGetValue(key, out var found) && found.All(sprite => sprite)) return found;
+        try
         {
+            var name = kind == MarkerKind.Upgrade ? "attack" : kind.ToString().ToLowerInvariant();
+            if (assets.TryGetValue(name, out var asset)) return cache[key] = Load(name, asset);
             var representative = Plugin.Catalog.Items.Values.FirstOrDefault(item => item.Kind.Equals(kind.ToString(), StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(item.IconGuid));
             if (representative != null)
-            {
-                try { return icons[kind] = LoadSprite("category:" + kind, representative.IconGuid, representative.IconName); }
-                catch (Exception e) { Plugin.Logger.LogWarning($"Category artwork fallback for {kind}: {e.Message}"); }
-            }
-            if (kind is MarkerKind.Upgrade) return icons[kind] = LoadSprite("category:" + kind, "b0e5b33781665c1459403febed86c93b");
-            if (kind is MarkerKind.Objective) return icons[kind] = LoadSprite("category:" + kind, "8b6860faeef7ae04f8cfbd9068a1f76c");
-            if (kind is MarkerKind.Lore) return icons[kind] = LoadSprite("category:" + kind, "087a8afe09493b642a9f1527133c0a53");
-            if (kind is MarkerKind.Clue) return icons[kind] = LoadSprite("category:" + kind, "159f29af9dde48d4c8c51d70cf629042");
-            var guid = kind switch {
-                MarkerKind.Challenge => "82a3b804368403244b6e81e4ae05edb8",
-                MarkerKind.Puzzle => "992929bdfa0b5174999934cccd4d8184",
-                MarkerKind.Wall => "0d5b2d246c4094c47baf17ec41de29f5",
-                _ => "844d5c930d1997341967b869363176ee" };
-            var reference = new AssetReference(guid);
-            var display = ResourceManager.LoadAssetByRef<MapMarkerTypeDisplayData>(ResourceContext.Always, reference);
-            if (!display || !display.markerIcon) throw new InvalidOperationException($"The game's {kind} map icon is unavailable.");
-            references.Add(reference);
-            icons[kind] = new[] { display.markerIcon };
+                return cache[key] = Load(key, new NativeIcon { Guid = representative.IconGuid, Type = "Sprite", Names = string.IsNullOrEmpty(representative.IconName) ? Array.Empty<string>() : new[] { representative.IconName } });
         }
-        else
+        catch (Exception e) { WarnOnce(key, e); }
+        // Missing artwork must never prevent the map or its filter menu opening.
+        // The native eye is a last resort; if it too fails, omit only the artwork.
+        try { return cache[key] = Load("secret", assets["secret"]); }
+        catch (Exception e) { WarnOnce("fallback:secret", e); return Array.Empty<Sprite>(); }
+    }
+
+    private Sprite[] Load(string key, NativeIcon asset)
+    {
+        if (cache.TryGetValue(key, out var found) && found.All(sprite => sprite)) return found;
+        if (failures.Contains("load:" + key)) throw new InvalidOperationException($"Native icon {key} previously failed to load.");
+        try
         {
-            var atlas = ResourceManager.LoadAssetByRef<SpriteAtlas>(ResourceContext.Always, heartsReference);
-            if (!atlas) throw new InvalidOperationException("The game's collectible icon atlas is unavailable.");
-            // The game assembles these three layers into the framed heart shown in its UI.
-            var names = new[] { "T_UI_HPMP_Collectible_FrameBlackBG",
-                kind == MarkerKind.Health ? "T_UI_HP_Collectible_Full" : "T_UI_MP_Collectible_Full",
-                "T_UI_HPMP_Collectible_Frame" };
             var layers = new List<Sprite>();
-            foreach (var name in names)
+            if (asset.Type == "SpriteAtlas")
             {
-                var sprite = atlas.GetSprite(name);
-                if (!sprite) throw new InvalidOperationException($"The game's collectible sprite {name} is unavailable.");
-                atlasClones.Add(sprite);
+                var atlas = Borrow<SpriteAtlas>(asset.Guid);
+                if (!atlas) throw new InvalidOperationException($"Native atlas {key} is unavailable.");
+                foreach (var name in asset.Names)
+                {
+                    var sprite = atlas.GetSprite(name);
+                    if (!sprite) throw new InvalidOperationException($"Native atlas sprite {name} is unavailable.");
+                    ownedSprites.Add(sprite);
+                    layers.Add(sprite);
+                }
+            }
+            else if (asset.Type == "Texture2D")
+            {
+                // These books are catalogued only as Texture2D, not as Sprite.
+                var texture = Borrow<Texture2D>(asset.Guid);
+                if (!texture) throw new InvalidOperationException($"Native texture {key} is unavailable.");
+                var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100f, 0, SpriteMeshType.FullRect);
+                if (!sprite) throw new InvalidOperationException($"Could not display native texture {key}.");
+                ownedSprites.Add(sprite);
                 layers.Add(sprite);
             }
-            icons[kind] = layers.ToArray();
+            else if (asset.Type == "MapMarkerTypeDisplayData")
+            {
+                var display = Borrow<MapMarkerTypeDisplayData>(asset.Guid);
+                if (!display || !display.markerIcon) throw new InvalidOperationException($"Native map symbol {key} is unavailable.");
+                layers.Add(display.markerIcon);
+            }
+            else if (asset.Type == "Sprite")
+            {
+                var reference = new AssetReferenceSprite(asset.Guid);
+                if (asset.Names.Length > 0) reference.SubObjectName = asset.Names[0];
+                references.Add(reference);
+                var sprite = ResourceManager.LoadAssetByRef<Sprite>(ResourceContext.Always, reference);
+                if (!sprite) throw new InvalidOperationException($"Native sprite {key} is unavailable.");
+                layers.Add(sprite);
+            }
+            else throw new InvalidDataException($"Unsupported native icon type: {asset.Type}");
+            return cache[key] = layers.ToArray();
         }
-        Plugin.Logger.LogInfo($"Using native game artwork for {kind} markers.");
-        return icons[kind];
+        catch { failures.Add("load:" + key); throw; }
+    }
+
+    private T Borrow<T>(string guid) where T : Object
+    {
+        var reference = new AssetReference(guid);
+        references.Add(reference);
+        return ResourceManager.LoadAssetByRef<T>(ResourceContext.Always, reference);
+    }
+
+    private void WarnOnce(string key, Exception error)
+    {
+        if (failures.Add("warning:" + key)) Plugin.Logger.LogWarning($"Using fallback artwork for {key}: {error.Message}");
     }
 
     internal void Dispose()
     {
-        foreach (var sprite in atlasClones)
-            if (sprite) Object.Destroy(sprite);
-        atlasClones.Clear();
-        icons.Clear();
-        itemIcons.Clear();
+        foreach (var sprite in ownedSprites) if (sprite) Object.Destroy(sprite);
+        ownedSprites.Clear();
+        cache.Clear();
         references.Clear();
+        failures.Clear();
     }
 }

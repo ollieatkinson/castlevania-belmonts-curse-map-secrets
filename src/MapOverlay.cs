@@ -16,7 +16,6 @@ public sealed class MapOverlay : MonoBehaviour
     private readonly List<MarkerVisual> markers = new();
     private readonly MarkerIcons icons = new();
     private FilterMenu? menu;
-    private bool menuUnavailable;
     private float nextRefresh;
     private readonly Dictionary<MarkerKind, int> counts = new();
 
@@ -44,6 +43,12 @@ public sealed class MapOverlay : MonoBehaviour
         var world = ResourceManager.LoadAssetByRef<WorldData>(ResourceContext.UI_GAMEMENU, reference);
         if (!world) return;
         map = levelMap;
+        // The controls must not depend on every marker's artwork loading.
+        if (menu == null)
+        {
+            try { menu = new FilterMenu(transform, SettingsChanged, icons); }
+            catch (Exception e) { Plugin.Logger.LogError($"Map filter menu unavailable; retrying next map opening: {e}"); }
+        }
         try
         {
             var rooms = new Dictionary<string, WorldRoomData>(StringComparer.Ordinal);
@@ -69,24 +74,20 @@ public sealed class MapOverlay : MonoBehaviour
                     Plugin.Logger.LogWarning($"Skipping marker outside map navigation zones: {pickup.Room}, {pickup.Id}, {position}");
                     continue;
                 }
-                CreateMarker(pickup.Category, pickup.Room, position, zone, layer, template, pickup, pickup.SecretIndex);
+                try { CreateMarker(pickup.Category, pickup.Room, position, zone, layer, template, pickup, pickup.SecretIndex); }
+                catch (Exception e) { Plugin.Logger.LogWarning($"Skipping unavailable marker {pickup.Id}: {e.Message}"); }
             }
             RefreshVisibility();
-            if (menu == null && !menuUnavailable)
-            {
-                try { menu = new FilterMenu(transform, SettingsChanged, icons); }
-                catch (Exception e)
-                {
-                    menuUnavailable = true;
-                    Plugin.Logger.LogError($"Map filter menu unavailable; keyboard shortcuts remain active: {e}");
-                }
-            }
             Plugin.Logger.LogInfo($"Map overlay: {markers.Count} markers loaded for {level.name}. Save filtering active; no player markers added.");
         }
-        catch
+        catch (Exception e)
         {
-            Detach();
-            throw;
+            // Keep map attachment and F5 alive even if marker construction fails.
+            if (root) { root!.SetActive(false); Object.Destroy(root); }
+            root = null;
+            markers.Clear();
+            counts.Clear();
+            Plugin.Logger.LogError($"Could not draw markers; map filters remain available: {e}");
         }
     }
 
@@ -95,6 +96,7 @@ public sealed class MapOverlay : MonoBehaviour
         int layer, SpriteRenderer? template, PickupMarker? pickup, int secretId)
     {
         var sprites = pickup != null ? icons.Get(pickup) : icons.Get(kind);
+        if (sprites.Length == 0) return;
         var marker = new GameObject($"MapAssist {kind}") { layer = layer };
         marker.transform.SetParent(root!.transform, false);
         position.z = template ? template!.transform.position.z : 0f;
@@ -144,7 +146,12 @@ public sealed class MapOverlay : MonoBehaviour
             var keyboard = Keyboard.current;
             if (keyboard != null)
             {
-                if (keyboard.f5Key.wasPressedThisFrame) Plugin.PanelExpanded.Value = !Plugin.PanelExpanded.Value;
+                if (keyboard.f5Key.wasPressedThisFrame)
+                {
+                    var expand = !Plugin.PanelVisible.Value || !Plugin.PanelExpanded.Value;
+                    Plugin.PanelVisible.Value = true;
+                    Plugin.PanelExpanded.Value = expand;
+                }
                 if (keyboard.f6Key.wasPressedThisFrame) Plugin.Enabled.Value = !Plugin.Enabled.Value;
                 if (keyboard.f7Key.wasPressedThisFrame) Plugin.Health.Value = !Plugin.Health.Value;
                 if (keyboard.f8Key.wasPressedThisFrame) Plugin.Mana.Value = !Plugin.Mana.Value;

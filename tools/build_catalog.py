@@ -18,6 +18,7 @@ def definition(item):
  id=item['itemID'];ref=item.get('itemDisplayIconAtlased',{})
  if not ref.get('m_AssetGUID'):ref=item.get('itemDisplayIconRef',{})
  if id=='WhipPendulum':ref=dict(m_AssetGUID='c3b03f3ba25cd4c4ea04a936f913539e',m_SubObjectName='PlayerStatus_VaniaIcons_Whip')
+ if id=='UniqueItemID' and ref.get('m_AssetGUID')=='67e1a3e022b9adc419060f76672c0fce':ref=dict(ref,m_SubObjectName='T_UI_Items_GenericCharmIcon')
  if ref.get('m_AssetGUID','').encode() not in KEYS:ref={}
  definitions[id]=dict(kind=KINDS.get(item['itemType'],'clue'),iconGuid=ref.get('m_AssetGUID',''),iconName=ref.get('m_SubObjectName',''),name=STR.get(item['itemDisplayName']['m_TableEntryReference']['m_KeyId'],id))
  return id

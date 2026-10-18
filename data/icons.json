@@ -1,0 +1,56 @@
+{
+  "health": {
+    "guid": "24161bd6821b99e409dd9a0a415d16ea",
+    "type": "SpriteAtlas",
+    "names": [
+      "T_UI_HPMP_Collectible_FrameBlackBG",
+      "T_UI_HP_Collectible_Full",
+      "T_UI_HPMP_Collectible_Frame"
+    ]
+  },
+  "mana": {
+    "guid": "24161bd6821b99e409dd9a0a415d16ea",
+    "type": "SpriteAtlas",
+    "names": [
+      "T_UI_HPMP_Collectible_FrameBlackBG",
+      "T_UI_MP_Collectible_Full",
+      "T_UI_HPMP_Collectible_Frame"
+    ]
+  },
+  "attack": {
+    "guid": "b0e5b33781665c1459403febed86c93b",
+    "type": "Texture2D"
+  },
+  "defence": {
+    "guid": "9d6e9631387862842ab4378528d9aa88",
+    "type": "Texture2D"
+  },
+  "objective": {
+    "guid": "8b6860faeef7ae04f8cfbd9068a1f76c",
+    "type": "Sprite"
+  },
+  "lore": {
+    "guid": "087a8afe09493b642a9f1527133c0a53",
+    "type": "Sprite"
+  },
+  "clue": {
+    "guid": "159f29af9dde48d4c8c51d70cf629042",
+    "type": "Sprite"
+  },
+  "challenge": {
+    "guid": "82a3b804368403244b6e81e4ae05edb8",
+    "type": "MapMarkerTypeDisplayData"
+  },
+  "puzzle": {
+    "guid": "992929bdfa0b5174999934cccd4d8184",
+    "type": "MapMarkerTypeDisplayData"
+  },
+  "wall": {
+    "guid": "0d5b2d246c4094c47baf17ec41de29f5",
+    "type": "MapMarkerTypeDisplayData"
+  },
+  "secret": {
+    "guid": "844d5c930d1997341967b869363176ee",
+    "type": "MapMarkerTypeDisplayData"
+  }
+}

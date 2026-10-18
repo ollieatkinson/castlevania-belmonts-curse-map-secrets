@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>MapAssist</AssemblyName>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
@@ -10,6 +10,7 @@
   <ItemGroup>
     <Compile Include="src/**/*.cs" />
     <EmbeddedResource Include="data/markers.json" LogicalName="MapAssist.markers.json" />
+    <EmbeddedResource Include="data/icons.json" LogicalName="MapAssist.icons.json" />
     <Reference Include="$(GamePath)/BepInEx/core/BepInEx.Core.dll" Private="false" />
     <Reference Include="$(GamePath)/BepInEx/core/BepInEx.Unity.IL2CPP.dll" Private="false" />
     <Reference Include="$(GamePath)/BepInEx/core/0Harmony.dll" Private="false" />
