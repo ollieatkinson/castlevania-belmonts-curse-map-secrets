@@ -99,6 +99,9 @@ internal static class SaveState
 
     internal static void BindAlias(PickupMarker marker, string actualId)
     {
+        // The prefab value is replaced by SavableIDContext during room setup.
+        // Never overwrite a statue's unique context ID with the shared prefab ID.
+        if (marker.Category == MarkerKind.Experience && actualId == "bcc12ecd-555d-461f-a01f-d141c80e4761") return;
         if (string.IsNullOrEmpty(actualId) || actualId == marker.SaveId || aliases.GetValueOrDefault(marker.Id) == actualId) return;
         aliases[marker.Id] = actualId;
         observationsDirty = true;

@@ -39,8 +39,14 @@ for room,r in sorted(ROOMS.items()):
   n=o['name'];save=o['id'] or ''
   if save and n.startswith(('GPE_UpgradeCollectibleHealth','GPE_UpgradeCollectibleMana','GPE_ConsumableAtkUpBook','GPE_ConsumableDefUpBook','GPE_DestructibleSourceExperience')):
    kind='health' if 'CollectibleHealth' in n else 'mana' if 'CollectibleMana' in n else 'experience' if 'SourceExperience' in n else 'upgrade'
-   # Experience-source clones reuse one prefab ID across all placements. It is not a unique collection key.
-   m=add(r,kind,o['x'],o['y'],save='' if kind=='experience' else save,state='unknown' if kind=='experience' else 'activated',name=n)
+   # Keep statue marker IDs stable, but read completion using the unique ID
+   # assigned by the room's SavableIDContext, never the shared prefab value.
+   if kind=='experience':
+    actual=o.get('contextId','')
+    if not actual or actual==save:raise ValueError(f"Missing unique experience-source ID in {room}")
+    m=add(r,kind,o['x'],o['y'],save=actual,state='activated',name=n,
+      uid=f"{r['room']}:{kind}::{round(o['x'],2)}:{round(o['y'],2)}")
+   else:m=add(r,kind,o['x'],o['y'],save=save,state='activated',name=n)
    if 'AtkUp' in n:m['symbol']='attack'
    elif 'DefUp' in n:m['symbol']='defence'
   if save and n.startswith('GPE_EncounterGate_MainEntity'):add(r,'challenge',o['x'],o['y'],save=save,state='encounter',name='Combat room')

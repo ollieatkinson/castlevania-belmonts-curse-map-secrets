@@ -24,6 +24,7 @@ internal sealed class FilterMenu
     private readonly TextMeshProUGUI sizeLabel;
     private readonly TextMeshProUGUI summary;
     private readonly TextMeshProUGUI expandHint;
+    private readonly List<(TextMeshProUGUI Label, ConfigEntry<UnityEngine.InputSystem.Key>? Key)> keyHints = new();
     private readonly List<(ConfigEntry<bool> Setting, Image Check, MarkerKind? Kind, TextMeshProUGUI? Count)> rows = new();
     private readonly TMP_FontAsset font;
     private readonly Sprite checkbox = null!;
@@ -78,7 +79,9 @@ internal sealed class FilterMenu
             bottom.pivot = Vector2.zero; bottom.anchoredPosition = Vector2.zero;
             var header = Button(panel, "Filters", 10, 8, 390, 38, () => Plugin.PanelExpanded.Value = !Plugin.PanelExpanded.Value);
             Text(header, "MAP SECRETS", 12, 1, 260, 36, 27, Gold).characterSpacing = 2f;
-            expandHint = Text(header, "F5", 324, 5, 54, 28, 18, Gold);
+            expandHint = Text(header, "", 284, 5, 94, 28, 18, Gold);
+            expandHint.enableAutoSizing = true;
+            expandHint.fontSizeMin = 10;
             expandHint.alignment = TextAlignmentOptions.MidlineRight;
             summary = Text(panel, "", 22, 51, 366, 26, 19, Parchment);
             for (var i = 0; i < pages.Length; i++)
@@ -94,15 +97,17 @@ internal sealed class FilterMenu
             {
                 var entry = Categories.All[i];
                 var which = i < 10 ? 0 : 1;
-                Row(pages[which].transform, 122 + (which == 0 ? i : i - 10) * 34, Categories.Settings[entry.Kind], entry.Label, entry.Key, entry.Kind);
+                var key = entry.Kind switch { MarkerKind.Health => Hotkeys.Health, MarkerKind.Mana => Hotkeys.Mana,
+                    MarkerKind.Secret => Hotkeys.Secrets, _ => null };
+                Row(pages[which].transform, 122 + (which == 0 ? i : i - 10) * 34, Categories.Settings[entry.Kind], entry.Label, key, entry.Kind);
             }
             var options = pages[2].transform;
-            Row(options, 126, Plugin.Enabled, "Show markers", "F6");
-            Row(options, 162, Plugin.HideCollected, "Hide collected / found", "");
-            Row(options, 198, Plugin.ShowUnexplored, "Unexplored rooms", "");
-            Row(options, 234, Plugin.Unverified, "Unverified locations", "");
-            Row(options, 270, Plugin.RoomBell, "First-visit bell", "");
-            Row(options, 306, Plugin.HoverLabels, "Marker tooltips", "");
+            Row(options, 126, Plugin.Enabled, "Show markers", Hotkeys.Overlay);
+            Row(options, 162, Plugin.HideCollected, "Hide collected / found");
+            Row(options, 198, Plugin.ShowUnexplored, "Unexplored rooms");
+            Row(options, 234, Plugin.Unverified, "Unverified locations");
+            Row(options, 270, Plugin.RoomBell, "First-visit bell");
+            Row(options, 306, Plugin.HoverLabels, "Marker tooltips");
             sizeLabel = Text(options, "", 24, 350, 260, 32, 21, Parchment);
             var smaller = Button(options, "Smaller markers", 294, 350, 40, 32, () => Plugin.IconSize.Value = Mathf.Max(12, Plugin.IconSize.Value - 4));
             Text(smaller, "-", 0, 0, 40, 32, 25, Gold).alignment = TextAlignmentOptions.Midline;
@@ -135,7 +140,8 @@ internal sealed class FilterMenu
             tab.Label.color = tab.Index == page ? Gold : Parchment;
         }
         summary.text = $"{counts.Values.Sum()} visible map markers";
-        expandHint.text = expanded ? "- F5" : "+ F5";
+        expandHint.text = (expanded ? "- " : "+ ") + Hotkeys.Label(Hotkeys.Menu);
+        foreach (var hint in keyHints) hint.Label.text = Hotkeys.Label(hint.Key);
         sizeLabel.text = $"Marker size: {Plugin.IconSize.Value}";
         foreach (var row in rows)
         {
@@ -149,7 +155,8 @@ internal sealed class FilterMenu
 
     internal void Dispose() { if (root) Object.Destroy(root); }
 
-    private void Row(Transform parent, float y, ConfigEntry<bool> setting, string label, string key, MarkerKind? kind = null)
+    private void Row(Transform parent, float y, ConfigEntry<bool> setting, string label,
+        ConfigEntry<UnityEngine.InputSystem.Key>? key = null, MarkerKind? kind = null)
     {
         var row = Button(parent, label, 12, y, 386, 32, () => { setting.Value = !setting.Value; changed(); });
         var frame = Image(Rect(row, "Checkbox", 6, 2, 28, 28), Gold);
@@ -173,7 +180,10 @@ internal sealed class FilterMenu
         Text(row, label, kind.HasValue ? 84 : 46, 0, kind.HasValue ? 212 : 284, 32, 21, Parchment);
         TextMeshProUGUI? countLabel = null;
         if (kind.HasValue) countLabel = Text(row, "0", 300, 1, 32, 30, 19, Parchment);
-        Text(row, key, 336, 2, 38, 28, 17, Gold).alignment = TextAlignmentOptions.MidlineRight;
+        var hint = Text(row, "", 336, 2, 38, 28, 17, Gold);
+        hint.alignment = TextAlignmentOptions.MidlineRight;
+        hint.enableAutoSizing = true; hint.fontSizeMin = 8;
+        keyHints.Add((hint, key));
         rows.Add((setting, tick, kind, countLabel));
     }
 

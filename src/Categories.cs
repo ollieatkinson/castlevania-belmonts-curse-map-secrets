@@ -4,14 +4,14 @@ namespace MapAssist;
 
 internal static class Categories
 {
-    internal static readonly (MarkerKind Kind, string Label, string Key)[] All = {
-        (MarkerKind.Health, "Health hearts", "F7"), (MarkerKind.Mana, "Mana hearts", "F8"),
-        (MarkerKind.Upgrade, "Attack / defence books", ""), (MarkerKind.Experience, "Experience sources", ""), (MarkerKind.Keepsake, "Keepsakes", ""),
-        (MarkerKind.Ability, "Abilities", ""), (MarkerKind.Arcana, "Arcana", ""),
-        (MarkerKind.Relic, "Relics", ""), (MarkerKind.Weapon, "Weapons", ""), (MarkerKind.Clue, "Clues", ""),
-        (MarkerKind.Challenge, "Challenge rooms", ""), (MarkerKind.Objective, "Objectives", ""),
-        (MarkerKind.Puzzle, "Puzzles", ""), (MarkerKind.Lore, "Lore", ""),
-        (MarkerKind.Secret, "Hidden paths", "F10"), (MarkerKind.Wall, "Breakable walls", "") };
+    internal static readonly (MarkerKind Kind, string Label)[] All = {
+        (MarkerKind.Health, "Health hearts"), (MarkerKind.Mana, "Mana hearts"),
+        (MarkerKind.Upgrade, "Attack / defence books"), (MarkerKind.Experience, "Experience sources"), (MarkerKind.Keepsake, "Keepsakes"),
+        (MarkerKind.Ability, "Abilities"), (MarkerKind.Arcana, "Arcana"),
+        (MarkerKind.Relic, "Relics"), (MarkerKind.Weapon, "Weapons"), (MarkerKind.Clue, "Clues"),
+        (MarkerKind.Challenge, "Challenge rooms"), (MarkerKind.Objective, "Objectives"),
+        (MarkerKind.Puzzle, "Puzzles"), (MarkerKind.Lore, "Lore"),
+        (MarkerKind.Secret, "Hidden paths"), (MarkerKind.Wall, "Breakable walls") };
     internal static readonly Dictionary<MarkerKind, ConfigEntry<bool>> Settings = new();
     internal static void Bind(ConfigFile config)
     {

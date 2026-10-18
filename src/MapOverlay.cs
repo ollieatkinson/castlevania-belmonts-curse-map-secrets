@@ -104,7 +104,7 @@ public sealed class MapOverlay : MonoBehaviour
         }
         catch (Exception e)
         {
-            // Keep map attachment and F5 alive even if marker construction fails.
+            // Keep map attachment and menu hotkey alive even if marker construction fails.
             if (root) { root!.SetActive(false); Object.Destroy(root); }
             root = null;
             markers.Clear();
@@ -189,16 +189,16 @@ public sealed class MapOverlay : MonoBehaviour
             var keyboard = Keyboard.current;
             if (keyboard != null)
             {
-                if (keyboard.f5Key.wasPressedThisFrame)
+                if (Hotkeys.Pressed(keyboard, Hotkeys.Menu))
                 {
                     var expand = !Plugin.PanelVisible.Value || !Plugin.PanelExpanded.Value;
                     Plugin.PanelVisible.Value = true;
                     Plugin.PanelExpanded.Value = expand;
                 }
-                if (keyboard.f6Key.wasPressedThisFrame) Plugin.Enabled.Value = !Plugin.Enabled.Value;
-                if (keyboard.f7Key.wasPressedThisFrame) Plugin.Health.Value = !Plugin.Health.Value;
-                if (keyboard.f8Key.wasPressedThisFrame) Plugin.Mana.Value = !Plugin.Mana.Value;
-                if (keyboard.f10Key.wasPressedThisFrame) Plugin.Secrets.Value = !Plugin.Secrets.Value;
+                if (Hotkeys.Pressed(keyboard, Hotkeys.Overlay)) Plugin.Enabled.Value = !Plugin.Enabled.Value;
+                if (Hotkeys.Pressed(keyboard, Hotkeys.Health)) Plugin.Health.Value = !Plugin.Health.Value;
+                if (Hotkeys.Pressed(keyboard, Hotkeys.Mana)) Plugin.Mana.Value = !Plugin.Mana.Value;
+                if (Hotkeys.Pressed(keyboard, Hotkeys.Secrets)) Plugin.Secrets.Value = !Plugin.Secrets.Value;
             }
             var popupVisible = ui && ui.confirmationPopup && ui.confirmationPopup.visible;
             menu?.Refresh(Plugin.PanelVisible.Value && !popupVisible, counts);
@@ -210,7 +210,7 @@ public sealed class MapOverlay : MonoBehaviour
                 nextRefresh = Time.unscaledTime + 0.2f;
                 RefreshVisibility();
             }
-            // Optional hover UI must never disable markers or the F5 controls.
+            // Optional hover UI must never disable markers or the menu hotkey controls.
             try { UpdateHover(popupVisible); }
             catch (Exception e)
             {

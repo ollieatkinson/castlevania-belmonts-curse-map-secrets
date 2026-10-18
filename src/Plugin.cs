@@ -33,7 +33,8 @@ public sealed class Plugin : BasePlugin
     public override void Load()
     {
         Logger = Log;
-        Enabled = Config.Bind("Markers", "Enabled", true, "Show Map Secrets markers. Toggle with F6 while the area map is open.");
+        Hotkeys.Bind(Config);
+        Enabled = Config.Bind("Markers", "Enabled", true, "Show Map Secrets markers. Shortcut is configurable in Hotkeys.");
         Categories.Bind(Config);
         Health = Categories.Settings[MarkerKind.Health];
         Mana = Categories.Settings[MarkerKind.Mana];
@@ -45,7 +46,7 @@ public sealed class Plugin : BasePlugin
         ShowUnexplored = Config.Bind("Filters", "ShowUnexplored", true, "Include destinations in rooms that have not been explored.");
         PanelVisible = Config.Bind("Display", "ShowControls", true, "Show the small Map Secrets controls on the area map. Hotkeys work even when hidden.");
         HoverLabels = Config.Bind("Display", "MarkerTooltips", true, "Highlight visible markers and show their name when hovered with the mouse or map cursor.");
-        PanelExpanded = Config.Bind("Display", "FiltersExpanded", false, "Expand the map filter controls. Toggle with F5.");
+        PanelExpanded = Config.Bind("Display", "FiltersExpanded", false, "Expand the map filter controls. Shortcut is configurable in Hotkeys (default F4).");
         IconSize = Config.Bind("Display", "IconSize", 40, new ConfigDescription("Marker size in pixels at 1080p.", new AcceptableValueRange<int>(12, 80)));
         using var stream = typeof(Plugin).Assembly.GetManifestResourceStream("MapAssist.markers.json")
             ?? throw new InvalidDataException("Marker catalog is missing.");
@@ -61,7 +62,7 @@ public sealed class Plugin : BasePlugin
         new Harmony(Id).PatchAll(typeof(Plugin).Assembly);
         AddComponent<MapOverlay>();
         AddComponent<RoomObserver>();
-        Log.LogInfo($"Map Secrets {BuildInfo.Version} loaded: {Catalog.Markers.Count} mapped locations across {Catalog.Areas.Count} areas; F5 opens category filters.");
+        Log.LogInfo($"Map Secrets {BuildInfo.Version} loaded: {Catalog.Markers.Count} mapped locations across {Catalog.Areas.Count} areas; menu shortcut: {Hotkeys.Label(Hotkeys.Menu)}.");
     }
 }
 
