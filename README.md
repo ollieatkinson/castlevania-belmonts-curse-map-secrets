@@ -8,10 +8,14 @@ Adds collectible and secret passage markers to the map in Castlevania: Belmont's
 
 ## Installation
 
-Close the game and extract one ZIP into the game folder:
+Close the game and extract the **whole ZIP into the main game folder**, beside `Castlevania Belmont's Curse.exe`. **Do not extract into `BepInEx` or `plugins`.** Choose one ZIP:
 
 - **Plugin:** for an existing BepInEx 6.0.788 installation.
 - **Standalone:** includes BepInEx for a fresh installation.
+
+On Windows, you can extract the standalone anywhere and run `Install.cmd` to find the game folder or select the game EXE. It handles a ZIP accidentally extracted inside `BepInEx`.
+
+The correct mod path is `BepInEx/plugins/MapAssist.dll`, with only one `BepInEx`. The loose `winhttp.dll` belongs beside the game EXE. See `INSTALL.txt` for the folder layout. Allow a few minutes for the first launch; if nothing loads, share `BepInEx/LogOutput.log`.
 
 On Linux/Proton, set Steam launch options to `WINEDLLOVERRIDES="winhttp=n,b" %command%`.
 

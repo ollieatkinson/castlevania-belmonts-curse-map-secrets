@@ -1,0 +1,32 @@
+Map Secrets - installation
+
+Extract the WHOLE ZIP into the game's main folder, beside:
+  Castlevania Belmont's Curse.exe
+Do NOT extract into BepInEx or plugins.
+
+Standalone download (Windows): you can instead extract to any folder and
+run Install.cmd. It finds a nearby game folder or asks you to select the game
+EXE. It also handles a ZIP accidentally extracted inside BepInEx.
+The regular plugin-only ZIP requires BepInEx to be installed already.
+
+The correct layout is:
+  Castlevania Belmont's Curse/
+    Castlevania Belmont's Curse.exe
+    winhttp.dll
+    doorstop_config.ini
+    dotnet/
+    BepInEx/
+      core/
+      plugins/
+        MapAssist.dll
+
+The loose winhttp.dll is normal: it loads BepInEx. The mod DLL belongs in
+BepInEx/plugins. BepInEx/BepInEx/plugins is the wrong location.
+
+Close the game before installing. On the first BepInEx launch, allow a few
+minutes for setup. Open the area map and press F4. Hotkeys are configurable in BepInEx/config/ollieatkinson.mapassist.cfg.
+
+If nothing loads, share BepInEx/LogOutput.log from the game folder.
+If that log does not exist, check that winhttp.dll, dotnet and BepInEx are
+all beside the game EXE. Linux/Proton requires this Steam launch option:
+  WINEDLLOVERRIDES="winhttp=n,b" %command%

@@ -35,6 +35,7 @@
       <StandaloneSource Include="$(StandaloneCache)BepInEx-source.tar.gz;$(StandaloneCache)Il2CppInterop-source.tar.gz;$(StandaloneCache)UnityDoorstop-source.tar.gz" />
     </ItemGroup>
     <Copy SourceFiles="@(StandaloneSource);packaging/THIRD_PARTY_NOTICES.txt" DestinationFolder="$(StandaloneRoot)MapSecrets/licenses" />
+    <Copy SourceFiles="packaging/Install.cmd;packaging/Install.ps1" DestinationFolder="$(StandaloneRoot)" />
     <ZipDirectory SourceDirectory="$(StandaloneRoot)" DestinationFile="dist/MapSecrets-v$(Version).standalone.zip" Overwrite="true" />
     <GetFileHash Files="dist/MapSecrets-v$(Version).standalone.zip" Algorithm="SHA256">
       <Output TaskParameter="Items" ItemName="StandaloneArchiveHash" />

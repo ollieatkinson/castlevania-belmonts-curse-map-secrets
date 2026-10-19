@@ -31,6 +31,7 @@ dist.mkdir(exist_ok=True)
 archive = dist / f"MapSecrets-v{version}.zip"
 with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as package:
     package.write("bin/Release/net6.0/MapAssist.dll", "BepInEx/plugins/MapAssist.dll")
+    package.write("packaging/INSTALL.txt", "INSTALL.txt")
     for document in ("README.md", "LICENSE"):
         package.write(document, document)
 checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
@@ -39,3 +40,6 @@ print(f"Created {archive}")
 PY
 
 "$dotnet_command" msbuild MapAssist.csproj -t:PackageStandalone -p:Version="$version" -nologo
+
+python3 packaging/validate_package.py "dist/MapSecrets-v$version.zip" MapAssist.dll
+python3 packaging/validate_package.py "dist/MapSecrets-v$version.standalone.zip" MapAssist.dll --standalone
