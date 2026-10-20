@@ -26,6 +26,8 @@ public sealed class MapOverlay : MonoBehaviour
     private bool hoverUnavailable;
     private float nextRefresh;
     private bool presentationSuspended;
+    private bool collectionUnavailable;
+    private bool explorationUnavailable;
     private readonly Dictionary<MarkerKind, int> counts = new();
 
     public MapOverlay(IntPtr pointer) : base(pointer) { }
@@ -46,7 +48,9 @@ public sealed class MapOverlay : MonoBehaviour
     {
         Detach();
         if (!levelMap || !levelMap!.context || !levelMap.mapCamera || !levelMap.mapCamera.mapCamera) return;
-        SaveState.Snapshot();
+        collectionUnavailable = explorationUnavailable = false;
+        try { SaveState.Snapshot(); }
+        catch (Exception e) { DisableCollectionFiltering(e); }
         var manager = LevelManager.Get();
         var level = levelMap.context.level;
         if (!manager || !level || !manager.worldDataDictionary.TryGetItem(level, out var reference)) return;
@@ -100,7 +104,7 @@ public sealed class MapOverlay : MonoBehaviour
                 catch (Exception e) { Plugin.Logger.LogWarning($"Skipping unavailable marker {pickup.Id}: {e.Message}"); }
             }
             RefreshVisibility();
-            Plugin.Logger.LogInfo($"Map overlay: {markers.Count} markers loaded for {level.name}. Save filtering active; no player markers added.");
+            Plugin.Logger.LogInfo($"Map overlay: {markers.Count} markers loaded for {level.name}. No player markers added.");
         }
         catch (Exception e)
         {
@@ -241,23 +245,57 @@ public sealed class MapOverlay : MonoBehaviour
     private void RefreshVisibility()
     {
         if (!map) return;
-        SaveState.CheckSession();
-        var explorer = MainCharacterSingleton.GetComponent<ExplorerComponent>();
+        if (!collectionUnavailable)
+        {
+            try { SaveState.CheckSession(); }
+            catch (Exception e) { DisableCollectionFiltering(e); }
+        }
+        ExplorerComponent? explorer = null;
+        if (!Plugin.ShowUnexplored.Value && !explorationUnavailable)
+        {
+            try { explorer = MainCharacterSingleton.GetComponent<ExplorerComponent>(); }
+            catch (Exception e) { DisableExplorationFiltering(e); }
+        }
         var currentZone = map!.context.GetCurrentNavigationZone();
         counts.Clear();
         foreach (var marker in markers)
         {
             if (!marker.Object) continue;
             var enabled = Categories.Enabled(marker.Kind);
-            var collected = marker.Pickup != null ? SaveState.GetCollected(marker.Pickup) : CollectionState.Unknown;
+            var collected = CollectionState.Unknown;
+            if (!collectionUnavailable && marker.Pickup != null)
+            {
+                try { collected = SaveState.GetCollected(marker.Pickup); }
+                catch (Exception e) { DisableCollectionFiltering(e); }
+            }
+            var explored = true;
+            if (!Plugin.ShowUnexplored.Value && !explorationUnavailable)
+            {
+                try { explored = SaveState.IsRoomExplored(explorer, marker.Room); }
+                catch (Exception e) { DisableExplorationFiltering(e); }
+            }
             var visible = Plugin.Enabled.Value && marker.Zone == currentZone
                 && MarkerRules.ShouldShow(enabled, Plugin.HideCollected.Value, collected,
-                    Plugin.ShowUnexplored.Value, SaveState.IsRoomExplored(explorer, marker.Room));
+                    Plugin.ShowUnexplored.Value, explored);
             marker.Object.SetActive(visible);
             marker.Collected = collected;
             if (!visible) { marker.Highlight = 0; continue; }
             counts[marker.Kind] = counts.GetValueOrDefault(marker.Kind) + 1;
         }
+    }
+
+    [HideFromIl2Cpp]
+    private void DisableCollectionFiltering(Exception error)
+    {
+        collectionUnavailable = true;
+        Plugin.Logger.LogWarning($"Collection filtering unavailable until the next map opening; showing markers with unknown completion: {error.Message}");
+    }
+
+    [HideFromIl2Cpp]
+    private void DisableExplorationFiltering(Exception error)
+    {
+        explorationUnavailable = true;
+        Plugin.Logger.LogWarning($"Exploration filtering unavailable until the next map opening; including unexplored rooms: {error.Message}");
     }
 
     [HideFromIl2Cpp]

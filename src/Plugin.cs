@@ -3,7 +3,6 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
-using Il2CppInterop.Runtime;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -51,18 +50,38 @@ public sealed class Plugin : BasePlugin
         using var stream = typeof(Plugin).Assembly.GetManifestResourceStream("MapAssist.markers.json")
             ?? throw new InvalidDataException("Marker catalog is missing.");
         Catalog = MarkerCatalog.Load(stream);
-        using var assembly = File.OpenRead(Path.Combine(Paths.GameRootPath, "GameAssembly.dll"));
-        using var sha256 = SHA256.Create();
-        var hash = Convert.ToHexString(sha256.ComputeHash(assembly));
-        if (!hash.Equals(Catalog.GameAssemblySha256, StringComparison.OrdinalIgnoreCase))
-        {
-            Log.LogError("Map Secrets marker data does not match this game build. Regenerate the catalog before using this version.");
-            return;
-        }
-        new Harmony(Id).PatchAll(typeof(Plugin).Assembly);
-        AddComponent<MapOverlay>();
-        AddComponent<RoomObserver>();
+        LogBuildDiagnostics();
+        var harmony = new Harmony(Id);
+        // A storefront or game update may change one API without breaking the others.
+        // Install each hook independently rather than aborting the entire plugin.
+        foreach (var patch in new[] { typeof(MapOpened), typeof(MapClosed), typeof(PickupActivated),
+            typeof(ResetTransientPickups), typeof(MapMenuClosed), typeof(MapStartsClosing), typeof(MapUiDisabled),
+            typeof(RoomEntered), typeof(LoreRead), typeof(ExplorationZoneEntered), typeof(SecretDiscovered) })
+            TryEnable($"{patch.Name} hook", () => harmony.CreateClassProcessor(patch).Patch());
+        TryEnable("map overlay", () => AddComponent<MapOverlay>());
+        TryEnable("room tracking and first-visit bell", () => AddComponent<RoomObserver>());
         Log.LogInfo($"Map Secrets {BuildInfo.Version} loaded: {Catalog.Markers.Count} mapped locations across {Catalog.Areas.Count} areas; menu shortcut: {Hotkeys.Label(Hotkeys.Menu)}.");
+    }
+
+    private void LogBuildDiagnostics()
+    {
+        try
+        {
+            Log.LogInfo($"Game version: {Application.version}.");
+            using var assembly = File.OpenRead(Path.Combine(Paths.GameRootPath, "GameAssembly.dll"));
+            using var sha256 = SHA256.Create();
+            var hash = Convert.ToHexString(sha256.ComputeHash(assembly));
+            Log.LogInfo($"GameAssembly.dll SHA-256: {hash}.");
+            if (!hash.Equals(Catalog.GameAssemblySha256, StringComparison.OrdinalIgnoreCase))
+                Log.LogWarning($"GameAssembly.dll differs from the marker catalog reference ({Catalog.GameAssemblySha256}). Continuing with available features; storefront builds can have different hashes. Include this log when reporting compatibility problems.");
+        }
+        catch (Exception e) { Log.LogWarning($"Could not read game build diagnostics; continuing with available features: {e.Message}"); }
+    }
+
+    private void TryEnable(string feature, Action enable)
+    {
+        try { enable(); }
+        catch (Exception e) { Log.LogWarning($"Could not enable {feature}; continuing with other features: {e}"); }
     }
 }
 

@@ -44,7 +44,7 @@ Experience statues have a separate toggle, off by default. Collected statues are
 
 Some activities and hidden paths have no confirmed completion flag and may remain visible after finishing them. Uncertain locations are hidden unless you enable **Unverified locations**. Previously read lore may appear until revisited with the mod installed. Markers aren't filtered by your unlocked abilities.
 
-The mod doesn't change your game saves. If a game update isn't supported, check `BepInEx/LogOutput.log`.
+The mod doesn't change your game saves. The current marker catalog was checked against Steam build **25975867**, but other builds, including Xbox app on PC, can load without matching its DLL hash. This does not guarantee compatibility with every build. Startup logs the game's version and `GameAssembly.dll` SHA-256 in `BepInEx/LogOutput.log`; a different or unreadable hash does not block loading. Hooks and components load independently, and features fall back only when they fail. If collection or exploration filtering fails, markers remain visible and filtering is retried the next time you open the map. Include the log when reporting compatibility problems.
 
 ## Building
 
