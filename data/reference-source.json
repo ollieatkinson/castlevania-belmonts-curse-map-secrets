@@ -1,6 +1,6 @@
 {
   "source": "https://www.gamerguides.com/castlevania-belmonts-curse/maps/paris",
-  "retrieved": "2026-10-17",
+  "retrieved": "2026-10-21",
   "markers": {
     "features": [
       {
@@ -1402,8 +1402,8 @@
           "displayTitle": "EXP Statue",
           "origPoints": [
             [
-              19938,
-              25378
+              19937,
+              25391
             ]
           ],
           "layerIds": [
@@ -3669,6 +3669,22 @@
       },
       {
         "properties": {
+          "id": 195716,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              19227,
+              20804
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
           "id": 195718,
           "catId": "db-117784",
           "displayTitle": "EXP Statue",
@@ -4474,8 +4490,8 @@
           "displayTitle": "One-Way Mirror",
           "origPoints": [
             [
-              33879,
-              20650
+              33898,
+              20736
             ]
           ],
           "layerIds": [
@@ -6746,8 +6762,8 @@
           "displayTitle": "ATK Up",
           "origPoints": [
             [
-              19486,
-              15347
+              19488,
+              15332
             ]
           ],
           "layerIds": [
@@ -7303,7 +7319,7 @@
         "properties": {
           "id": 196834,
           "catId": "db-117787",
-          "displayTitle": "Bell of Courage",
+          "displayTitle": "Bell",
           "origPoints": [
             [
               18860,
@@ -10170,8 +10186,8 @@
           "displayTitle": "Freezing Path",
           "origPoints": [
             [
-              19762,
-              25331
+              19763,
+              25343
             ]
           ],
           "layerIds": [
@@ -10220,6 +10236,854 @@
             [
               16875,
               25506
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197365,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              20027,
+              22590
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197367,
+          "catId": "db-117784",
+          "displayTitle": "Wise Heart Fragment",
+          "origPoints": [
+            [
+              21609,
+              26207
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197369,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue - Dungeon",
+          "origPoints": [
+            [
+              33420,
+              19386
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197371,
+          "catId": "db-117843",
+          "displayTitle": "Platforming Challenge",
+          "origPoints": [
+            [
+              35904,
+              17529
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197373,
+          "catId": "db-117784",
+          "displayTitle": "Jump on the wall right before the mirror in Boudoirs ",
+          "origPoints": [
+            [
+              32690,
+              20655
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197375,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              32929,
+              19530
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197385,
+          "catId": "db-117784",
+          "displayTitle": "Wise Heart Timed",
+          "origPoints": [
+            [
+              5989,
+              20784
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197386,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              17968,
+              24787
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197387,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              17929,
+              24788
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197391,
+          "catId": "db-117783",
+          "displayTitle": "Forsaken Ring",
+          "origPoints": [
+            [
+              18061,
+              25184
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197393,
+          "catId": "db-117789",
+          "displayTitle": "The Miser",
+          "origPoints": [
+            [
+              17509,
+              25076
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197395,
+          "catId": "db-117784",
+          "displayTitle": "Brave Heart Fragment",
+          "origPoints": [
+            [
+              17018,
+              25036
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197402,
+          "catId": "db-117843",
+          "displayTitle": "Combat Room",
+          "origPoints": [
+            [
+              16879,
+              25571
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197409,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              18353,
+              25423
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197410,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              18829,
+              25364
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197411,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              19728,
+              25306
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197412,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              19802,
+              25305
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197413,
+          "catId": "db-117781",
+          "displayTitle": "Gungnir",
+          "origPoints": [
+            [
+              19765,
+              25306
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197427,
+          "catId": "db-117843",
+          "displayTitle": "Combat Room",
+          "origPoints": [
+            [
+              12236,
+              20872
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197428,
+          "catId": "db-117781",
+          "displayTitle": "Almace and Hauteclaire",
+          "origPoints": [
+            [
+              12048,
+              20787
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197435,
+          "catId": "db-117781",
+          "displayTitle": "Morning Star",
+          "origPoints": [
+            [
+              29923,
+              20308
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197436,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              31948,
+              20495
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197438,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              33621,
+              20846
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197441,
+          "catId": "db-117784",
+          "displayTitle": "Brave Heart Fragment",
+          "origPoints": [
+            [
+              33464,
+              20836
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197444,
+          "catId": "map-8243",
+          "displayTitle": "",
+          "origPoints": [
+            [
+              34201,
+              19322
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197451,
+          "catId": "db-117783",
+          "displayTitle": "Blood Vial",
+          "origPoints": [
+            [
+              32357,
+              19705
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197463,
+          "catId": "db-117843",
+          "displayTitle": "Platforming Challenge",
+          "origPoints": [
+            [
+              32746,
+              19625
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197476,
+          "catId": "db-117783",
+          "displayTitle": "Blackened Heart",
+          "origPoints": [
+            [
+              32615,
+              19429
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197483,
+          "catId": "db-117843",
+          "displayTitle": "Platforming Challenge",
+          "origPoints": [
+            [
+              32707,
+              19522
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197484,
+          "catId": "db-117783",
+          "displayTitle": "Raven's Feather",
+          "origPoints": [
+            [
+              7464,
+              20993
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197487,
+          "catId": "db-117783",
+          "displayTitle": "Grim Token",
+          "origPoints": [
+            [
+              32723,
+              20023
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197488,
+          "catId": "db-117843",
+          "displayTitle": "Platforming Challenge",
+          "origPoints": [
+            [
+              32701,
+              19910
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197494,
+          "catId": "map-8242",
+          "displayTitle": "Alucard Portrait Puzzle",
+          "origPoints": [
+            [
+              34169,
+              19169
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197500,
+          "catId": "db-117781",
+          "displayTitle": "Alucard's Sword and Shield",
+          "origPoints": [
+            [
+              34225,
+              19076
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197503,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              31719,
+              19822
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197505,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              19986,
+              20404
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197506,
+          "catId": "db-117784",
+          "displayTitle": "EXP Statue",
+          "origPoints": [
+            [
+              33280,
+              20178
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197508,
+          "catId": "db-117769",
+          "displayTitle": "Break from the east",
+          "origPoints": [
+            [
+              32803,
+              20354
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197510,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              32770,
+              20346
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197511,
+          "catId": "db-117843",
+          "displayTitle": "Combat Room",
+          "origPoints": [
+            [
+              32689,
+              20241
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197514,
+          "catId": "db-117783",
+          "displayTitle": "Cursed Coin",
+          "origPoints": [
+            [
+              32837,
+              20188
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197515,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              23393,
+              20565
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197516,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              32930,
+              19474
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197517,
+          "catId": "db-117781",
+          "displayTitle": "Thorn Whip",
+          "origPoints": [
+            [
+              35719,
+              17522
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197519,
+          "catId": "map-8242",
+          "displayTitle": "",
+          "origPoints": [
+            [
+              36049,
+              17727
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197520,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              36103,
+              17603
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197521,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              35476,
+              17761
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197523,
+          "catId": "db-117783",
+          "displayTitle": "Wraith's Tear",
+          "origPoints": [
+            [
+              35186,
+              17837
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197524,
+          "catId": "db-117843",
+          "displayTitle": "Platforming Challenge",
+          "origPoints": [
+            [
+              35247,
+              17729
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197525,
+          "catId": "db-117783",
+          "displayTitle": "Shadow Veil",
+          "origPoints": [
+            [
+              20442,
+              20327
+            ]
+          ],
+          "layerIds": [
+            835
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197542,
+          "catId": "db-117787",
+          "displayTitle": "Bell",
+          "origPoints": [
+            [
+              19300,
+              13248
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197544,
+          "catId": "db-117787",
+          "displayTitle": "Bell",
+          "origPoints": [
+            [
+              20106,
+              13230
+            ]
+          ],
+          "layerIds": [
+            846
+          ]
+        }
+      },
+      {
+        "properties": {
+          "id": 197545,
+          "catId": "db-117770",
+          "displayTitle": "Illusory Wall",
+          "origPoints": [
+            [
+              20719,
+              14513
             ]
           ],
           "layerIds": [

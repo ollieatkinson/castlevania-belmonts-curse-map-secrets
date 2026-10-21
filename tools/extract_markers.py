@@ -18,5 +18,5 @@ def main():
  run('audit_rooms.py',args.game,args.cache/'map-assist-audit')
  run('calibrate_reference.py',args.cache,args.reference)
  run('match_reference.py',args.cache,args.reference)
- run('build_catalog.py',args.cache,args.game,args.output)
+ run('build_catalog.py',args.cache,args.game,args.output,'--reference',args.reference)
 if __name__=='__main__':main()

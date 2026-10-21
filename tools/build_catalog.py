@@ -1,6 +1,8 @@
 """Build factual marker mappings from local room/asset audits and an optional guide cross-check."""
 import json,pathlib,collections,math,re,hashlib,sys,argparse,base64
-p=argparse.ArgumentParser();p.add_argument("cache",type=pathlib.Path);p.add_argument("game",type=pathlib.Path);p.add_argument("output",type=pathlib.Path);args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("cache",type=pathlib.Path);p.add_argument("game",type=pathlib.Path);p.add_argument("output",type=pathlib.Path)
+p.add_argument('--reference',type=pathlib.Path,default=pathlib.Path(__file__).resolve().parent.parent/'data/reference-source.json');args=p.parse_args()
+reference_source=json.loads(args.reference.read_text())
 BASE=args.cache
 A=json.load(open(BASE/'map-assist-assets-cache.json'));C=json.load(open(BASE/'map-assist-room-configs.json'));T=json.load(open(BASE/'map-assist-english.json'))
 STR={r['m_Id']:r['m_Localized'] for t in T.values() for r in t['m_TableData']}
@@ -146,7 +148,7 @@ for ref in reference:
 markers=list({m['id']:m for m in markers if m['kind']!='lore' or m['source']!='game' or m.pop('corroboratedLore',False)}.values())
 # Native scene copies of the final area intentionally share pickup GUIDs. Each area retains its own marker.
 result=dict(schema=2,gameAssemblySha256=hashlib.file_digest((args.game/'GameAssembly.dll').open('rb'),'sha256').hexdigest(),markers=markers,items=definitions,
- reference=dict(url='https://www.gamerguides.com/castlevania-belmonts-curse/maps/paris',date='2026-10-17',crossChecked=all_reference),areas=sorted({r['world'] for r in ROOMS.values()}),roomsAudited=dict(collections.Counter(r['world'] for r in ROOMS.values())))
+ reference=dict(url=reference_source['source'],date=reference_source['retrieved'],crossChecked=all_reference),areas=sorted({r['world'] for r in ROOMS.values()}),roomsAudited=dict(collections.Counter(r['world'] for r in ROOMS.values())))
 args.output.write_text(json.dumps(result,indent=2)+'\n')
 report=dict(rooms=len(ROOMS),areas=result['areas'],markers=dict(collections.Counter(m['kind'] for m in markers)),native=sum(m['source'].startswith('game') for m in markers),referenceLinked=dict(linked),unverified=uncertain,unknownCompletion=dict(collections.Counter(m['kind'] for m in markers if m['state']=='unknown')))
 args.output.with_name('coverage.json').write_text(json.dumps(report,indent=2)+'\n');print({k:v for k,v in report.items() if k not in ['areas','unverified']});print('Unverified marker mappings',len(uncertain))

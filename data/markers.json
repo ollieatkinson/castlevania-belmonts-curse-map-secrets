@@ -4404,6 +4404,22 @@
       "verified": true
     },
     {
+      "id": "World_Biome_06_MainHall_MainHall_MVP_Room_07_uid252:lore:13.53:0.65",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_07_uid252",
+      "kind": "lore",
+      "x": 13.53,
+      "y": 0.65,
+      "saveId": "",
+      "itemId": "",
+      "state": "observed",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Lore",
+      "source": "game",
+      "verified": true
+    },
+    {
       "id": "World_Biome_06_MainHall_MainHall_MVP_Room_07_uid252:weapon:0cdeaf3e-2e44-419f-bb04-5a746ccb782a:17.2:21.0",
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_07_uid252",
@@ -7191,8 +7207,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
       "kind": "wall",
-      "x": 24.9371,
-      "y": 7.2838,
+      "x": 24.946,
+      "y": 7.5875,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7207,8 +7223,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room41_uid134",
       "kind": "wall",
-      "x": 5.0217,
-      "y": 4.8484,
+      "x": 5.0397,
+      "y": 5.4306,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7223,8 +7239,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room29_uid121",
       "kind": "wall",
-      "x": 5.8776,
-      "y": 1.245,
+      "x": 5.9026,
+      "y": 2.1268,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7239,8 +7255,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room35_uid128",
       "kind": "secret",
-      "x": 26.8022,
-      "y": 18.7505,
+      "x": 26.831,
+      "y": 19.5509,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7255,8 +7271,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room29_uid121",
       "kind": "wall",
-      "x": 5.6289,
-      "y": 35.7034,
+      "x": 5.6539,
+      "y": 35.9634,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7271,8 +7287,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room02_uid84",
       "kind": "wall",
-      "x": 22.9974,
-      "y": 5.7301,
+      "x": 23.0221,
+      "y": 5.5927,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7287,8 +7303,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room02_uid84",
       "kind": "secret",
-      "x": 105.2286,
-      "y": 9.7349,
+      "x": 105.2567,
+      "y": 9.5253,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7303,8 +7319,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room26_uid118",
       "kind": "secret",
-      "x": 23.2108,
-      "y": 22.7868,
+      "x": 23.2325,
+      "y": 23.0454,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7319,8 +7335,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room05_uid85",
       "kind": "wall",
-      "x": 29.5771,
-      "y": 19.2307,
+      "x": 29.607,
+      "y": 19.0843,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7335,8 +7351,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoor_Room_Boss_Leon_MainRoom_uid80",
       "kind": "objective",
-      "x": 10.9735,
-      "y": 11.0745,
+      "x": 10.9997,
+      "y": 12.0135,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7351,8 +7367,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room21_uid108",
       "kind": "secret",
-      "x": 39.4498,
-      "y": 13.0046,
+      "x": 39.4762,
+      "y": 12.5014,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7367,8 +7383,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room19_uid128",
       "kind": "secret",
-      "x": 23.2764,
-      "y": 28.9705,
+      "x": 22.4241,
+      "y": 28.9541,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7383,8 +7399,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room19_uid128",
       "kind": "secret",
-      "x": 20.0626,
-      "y": 3.5835,
+      "x": 19.1842,
+      "y": 3.5997,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7399,8 +7415,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room19_uid128",
       "kind": "wall",
-      "x": 13.4702,
-      "y": 0.8457,
+      "x": 12.5382,
+      "y": 0.8654,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7415,8 +7431,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room20_uid129",
       "kind": "secret",
-      "x": 45.5878,
-      "y": 16.9407,
+      "x": 45.1119,
+      "y": 16.9397,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7431,8 +7447,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room23_uid132",
       "kind": "challenge",
-      "x": 33.2271,
-      "y": 4.5469,
+      "x": 32.6507,
+      "y": 4.5284,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7447,8 +7463,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room08_uid116",
       "kind": "secret",
-      "x": 30.5295,
-      "y": 20.5726,
+      "x": 30.5163,
+      "y": 20.6338,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7463,8 +7479,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room25_uid134",
       "kind": "secret",
-      "x": 2.8602,
-      "y": 16.8392,
+      "x": 1.647,
+      "y": 16.9053,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7479,8 +7495,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room25_uid134",
       "kind": "challenge",
-      "x": 23.8734,
-      "y": 8.2939,
+      "x": 22.8309,
+      "y": 8.3709,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7495,8 +7511,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room01_uid108",
       "kind": "secret",
-      "x": 45.011,
-      "y": 26.1957,
+      "x": 44.5304,
+      "y": 26.3165,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7511,8 +7527,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room12_uid120",
       "kind": "secret",
-      "x": 46.6186,
-      "y": 1.6959,
+      "x": 46.5411,
+      "y": 1.8649,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7527,8 +7543,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room17_uid126",
       "kind": "challenge",
-      "x": 28.5705,
-      "y": 23.1328,
+      "x": 27.5662,
+      "y": 23.3078,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7543,8 +7559,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room13_uid121",
       "kind": "secret",
-      "x": 7.8464,
-      "y": 11.8819,
+      "x": 7.0638,
+      "y": 12.1048,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7559,8 +7575,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room05_uid113",
       "kind": "secret",
-      "x": 40.46,
-      "y": 31.9983,
+      "x": 40.9176,
+      "y": 32.2789,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7575,8 +7591,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room05_uid113",
       "kind": "secret",
-      "x": 21.0125,
-      "y": 10.2617,
+      "x": 21.312,
+      "y": 10.5702,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7591,8 +7607,8 @@
       "world": "World_Biome_03_Catacombs",
       "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room33_uid143",
       "kind": "secret",
-      "x": 30.9198,
-      "y": 25.2021,
+      "x": 30.3246,
+      "y": 25.5416,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7607,8 +7623,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_Room_980_uid194",
       "kind": "secret",
-      "x": 211.8357,
-      "y": 5.9416,
+      "x": 211.4706,
+      "y": 6.6502,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7623,8 +7639,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
       "kind": "secret",
-      "x": 9.3559,
-      "y": 10.4306,
+      "x": 9.4695,
+      "y": 11.082,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7639,8 +7655,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_060_uid210",
       "kind": "challenge",
-      "x": 7.3721,
-      "y": 22.7419,
+      "x": 7.5237,
+      "y": 22.4082,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7655,8 +7671,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
       "kind": "wall",
-      "x": 7.5456,
-      "y": 33.5409,
+      "x": 7.8216,
+      "y": 33.8978,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7671,8 +7687,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1903_uid207",
       "kind": "secret",
-      "x": 32.6189,
-      "y": 15.6045,
+      "x": 32.8554,
+      "y": 15.8587,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7687,8 +7703,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
       "kind": "wall",
-      "x": 40.6527,
-      "y": 45.0129,
+      "x": 40.9858,
+      "y": 45.2236,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7703,8 +7719,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_28_uid277",
       "kind": "secret",
-      "x": 11.6893,
-      "y": 3.3843,
+      "x": 12.0552,
+      "y": 3.7943,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7719,8 +7735,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
       "kind": "secret",
-      "x": 37.5075,
-      "y": 31.6289,
+      "x": 37.8352,
+      "y": 32.0102,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7735,8 +7751,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_28_uid277",
       "kind": "secret",
-      "x": 42.8927,
-      "y": 11.448,
+      "x": 43.3125,
+      "y": 11.7552,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7751,8 +7767,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_030_uid201",
       "kind": "challenge",
-      "x": 19.2211,
-      "y": 0.257,
+      "x": 19.6001,
+      "y": 0.8725,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7767,8 +7783,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_030_uid201",
       "kind": "wall",
-      "x": 33.6227,
-      "y": 0.5064,
+      "x": 34.0265,
+      "y": 1.1187,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7783,8 +7799,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_030_uid201",
       "kind": "secret",
-      "x": 40.4097,
-      "y": 7.4063,
+      "x": 40.8252,
+      "y": 7.9306,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7799,8 +7815,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_14_uid259",
       "kind": "wall",
-      "x": -9.0027,
-      "y": 1.0685,
+      "x": -8.6724,
+      "y": 2.0049,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7815,8 +7831,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_080_uid245",
       "kind": "secret",
-      "x": 20.2143,
-      "y": 5.9416,
+      "x": 20.595,
+      "y": 6.6502,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7831,8 +7847,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
       "kind": "secret",
-      "x": 8.7043,
-      "y": -3.5353,
+      "x": 8.9824,
+      "y": -2.7059,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -7847,8 +7863,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_110_uid218",
       "kind": "wall",
-      "x": 32.4534,
-      "y": 13.3718,
+      "x": 32.6896,
+      "y": 14.1514,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7863,8 +7879,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
       "kind": "wall",
-      "x": 25.4128,
-      "y": 1.0369,
+      "x": 25.5541,
+      "y": 1.808,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7943,8 +7959,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room17_uid101",
       "kind": "challenge",
-      "x": 19.7811,
-      "y": 7.8678,
+      "x": 19.7977,
+      "y": 8.161,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -7959,8 +7975,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room10_uid92",
       "kind": "wall",
-      "x": 12.3289,
-      "y": 15.4919,
+      "x": 12.3412,
+      "y": 15.1784,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8023,8 +8039,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room10_uid92",
       "kind": "secret",
-      "x": -13.2855,
-      "y": 19.9139,
+      "x": -13.2742,
+      "y": 19.5206,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8055,8 +8071,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
       "kind": "wall",
-      "x": 73.0159,
-      "y": 41.909,
+      "x": 73.0267,
+      "y": 41.588,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8071,8 +8087,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
       "kind": "challenge",
-      "x": 16.4819,
-      "y": 31.0626,
+      "x": 16.4904,
+      "y": 30.9373,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8080,15 +8096,15 @@
       "progressKeys": [],
       "name": "Combat Room",
       "source": "reference",
-      "verified": false
+      "verified": true
     },
     {
       "id": "reference:195360",
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room41_uid131",
       "kind": "wall",
-      "x": 54.0295,
-      "y": 16.2444,
+      "x": 54.2105,
+      "y": 16.2299,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8101,10 +8117,10 @@
     {
       "id": "reference:195376",
       "world": "World_Biome_02_InnocentsCemetery",
-      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room36_uid126",
       "kind": "challenge",
-      "x": 69.874,
-      "y": 45.5266,
+      "x": 21.9794,
+      "y": 6.5182,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8135,8 +8151,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room33_uid124",
       "kind": "secret",
-      "x": 62.1177,
-      "y": 9.5916,
+      "x": 62.2609,
+      "y": 9.5737,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8151,8 +8167,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room19_uid151",
       "kind": "wall",
-      "x": 134.8877,
-      "y": 20.7284,
+      "x": 134.9694,
+      "y": 20.7153,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8167,8 +8183,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room19_uid151",
       "kind": "secret",
-      "x": 107.6847,
-      "y": 5.9286,
+      "x": 107.7547,
+      "y": 5.9181,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8183,8 +8199,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room19_uid151",
       "kind": "secret",
-      "x": 83.4675,
-      "y": 0.6371,
+      "x": 83.5271,
+      "y": 0.6275,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8231,8 +8247,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
       "kind": "secret",
-      "x": 69.2935,
-      "y": 18.5728,
+      "x": 69.3986,
+      "y": 18.5691,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8245,10 +8261,10 @@
     {
       "id": "reference:195513",
       "world": "World_Biome_02_InnocentsCemetery",
-      "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_170_uid150",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
       "kind": "challenge",
-      "x": 20.7761,
-      "y": -18.0103,
+      "x": 20.8603,
+      "y": 7.9878,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8263,8 +8279,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
       "kind": "challenge",
-      "x": 59.8388,
-      "y": -14.582,
+      "x": 59.9398,
+      "y": -14.58,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8309,10 +8325,10 @@
     {
       "id": "reference:195525",
       "world": "World_Biome_02_InnocentsCemetery",
-      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room38_uid128",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room37_uid127",
       "kind": "challenge",
-      "x": 9.7654,
-      "y": 2.5136,
+      "x": 57.8655,
+      "y": 15.5104,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8327,8 +8343,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room30_uid118",
       "kind": "secret",
-      "x": 12.048,
-      "y": 52.4909,
+      "x": 12.1079,
+      "y": 52.4836,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8343,8 +8359,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room25_uid113",
       "kind": "secret",
-      "x": 16.6529,
-      "y": 57.7632,
+      "x": 16.6735,
+      "y": 57.7527,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8359,8 +8375,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room26_uid114",
       "kind": "challenge",
-      "x": 24.0026,
-      "y": 17.1096,
+      "x": 24.0366,
+      "y": 17.0994,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8375,8 +8391,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_050_uid136",
       "kind": "wall",
-      "x": 40.8225,
-      "y": 27.9024,
+      "x": 40.7607,
+      "y": 27.8858,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8385,6 +8401,22 @@
       "name": "Break from the west",
       "source": "reference",
       "verified": true
+    },
+    {
+      "id": "reference:195662",
+      "world": "World_Biome_02_InnocentsCemetery",
+      "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room22_uid110",
+      "kind": "challenge",
+      "x": 12.4249,
+      "y": 29.7871,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Combat Room",
+      "source": "reference",
+      "verified": false
     },
     {
       "id": "reference:195667",
@@ -8439,8 +8471,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "secret",
-      "x": 10.7373,
-      "y": 2.2258,
+      "x": 10.7575,
+      "y": 2.1517,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8471,8 +8503,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "secret",
-      "x": 92.8028,
-      "y": 20.7482,
+      "x": 92.8263,
+      "y": 20.3399,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8519,8 +8551,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room09_uid90",
       "kind": "wall",
-      "x": 12.9361,
-      "y": 17.3432,
+      "x": 12.9554,
+      "y": 16.7617,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8535,8 +8567,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "wall",
-      "x": 45.3872,
-      "y": 35.2658,
+      "x": 45.4088,
+      "y": 34.5955,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8567,8 +8599,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "wall",
-      "x": 61.22,
-      "y": 72.561,
+      "x": 61.2423,
+      "y": 71.2178,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8583,8 +8615,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
       "kind": "wall",
-      "x": 16.828,
-      "y": 49.3096,
+      "x": 16.8494,
+      "y": 46.7441,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8599,8 +8631,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
       "kind": "challenge",
-      "x": 4.7254,
-      "y": 24.7799,
+      "x": 4.7463,
+      "y": 22.657,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8615,8 +8647,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "secret",
-      "x": 93.383,
-      "y": 65.9696,
+      "x": 93.4066,
+      "y": 64.7454,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8631,8 +8663,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
       "kind": "wall",
-      "x": 42.9397,
-      "y": 39.6313,
+      "x": 42.9622,
+      "y": 37.2404,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8647,8 +8679,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
       "kind": "secret",
-      "x": 37.8831,
-      "y": 29.1185,
+      "x": 37.9055,
+      "y": 26.9173,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8661,10 +8693,10 @@
     {
       "id": "reference:195916",
       "world": "World_Biome_01_Streets_Poor",
-      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room14_uid97",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "challenge",
-      "x": 30.5055,
-      "y": 0.9177,
+      "x": 54.5276,
+      "y": 90.2253,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8679,8 +8711,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1903_uid207",
       "kind": "secret",
-      "x": 34.8536,
-      "y": 6.2108,
+      "x": 35.094,
+      "y": 6.5847,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8695,8 +8727,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "challenge",
-      "x": 27.8964,
-      "y": 23.3347,
+      "x": 27.9174,
+      "y": 22.8797,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8711,8 +8743,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room10_uid92",
       "kind": "challenge",
-      "x": 107.4088,
-      "y": 5.2294,
+      "x": 107.425,
+      "y": 5.1011,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8727,8 +8759,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_18_uid263",
       "kind": "challenge",
-      "x": -22.8249,
-      "y": 11.1075,
+      "x": -22.5185,
+      "y": 12.2473,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8743,8 +8775,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room05_uid85",
       "kind": "wall",
-      "x": 58.3415,
-      "y": 19.3975,
+      "x": 58.3726,
+      "y": 19.2481,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8759,8 +8791,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_12_uid257",
       "kind": "objective",
-      "x": 11.3608,
-      "y": 8.1662,
+      "x": 13.3429,
+      "y": 2.1198,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8775,8 +8807,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "challenge",
-      "x": 55.4754,
-      "y": 16.0917,
+      "x": 55.5094,
+      "y": 15.5328,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8791,8 +8823,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "lore",
-      "x": 58.9569,
-      "y": 4.4109,
+      "x": 58.9911,
+      "y": 4.0627,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8807,8 +8839,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "secret",
-      "x": 62.6872,
-      "y": 7.8317,
+      "x": 62.7215,
+      "y": 7.4218,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8823,8 +8855,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "secret",
-      "x": 64.5938,
-      "y": 8.9163,
+      "x": 64.6281,
+      "y": 8.4869,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8839,8 +8871,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "challenge",
-      "x": 37.3215,
-      "y": 22.2658,
+      "x": 37.3547,
+      "y": 21.5955,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8855,8 +8887,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "objective",
-      "x": 55.807,
-      "y": 25.0191,
+      "x": 55.841,
+      "y": 24.2992,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8871,8 +8903,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room19_uid105",
       "kind": "secret",
-      "x": 6.0227,
-      "y": 5.6466,
+      "x": 6.0576,
+      "y": 5.5108,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8887,8 +8919,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room23_uid110",
       "kind": "wall",
-      "x": 29.2372,
-      "y": 20.649,
+      "x": 29.2711,
+      "y": 20.4771,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8903,8 +8935,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
       "kind": "wall",
-      "x": 9.5214,
-      "y": 13.257,
+      "x": 9.6353,
+      "y": 13.8725,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8919,8 +8951,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room23_uid110",
       "kind": "challenge",
-      "x": 19.9531,
-      "y": 9.3854,
+      "x": 19.9866,
+      "y": 9.4166,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8933,10 +8965,10 @@
     {
       "id": "reference:196085",
       "world": "World_Biome_06_MainHall",
-      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1903_uid207",
       "kind": "secret",
-      "x": 60.5064,
-      "y": 28.0543,
+      "x": 12.7081,
+      "y": 2.4811,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8951,8 +8983,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
       "kind": "challenge",
-      "x": 45.9392,
-      "y": 3.9464,
+      "x": 46.1159,
+      "y": 4.6805,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8967,8 +8999,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_35_uid137",
       "kind": "lore",
-      "x": 12.7575,
-      "y": 2.9416,
+      "x": 12.4337,
+      "y": 2.9724,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -8983,8 +9015,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_02_uid95",
       "kind": "secret",
-      "x": 5.498,
-      "y": 26.2501,
+      "x": 5.2542,
+      "y": 26.2915,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -8999,8 +9031,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_02_uid95",
       "kind": "secret",
-      "x": 20.0604,
-      "y": 40.0109,
+      "x": 19.8347,
+      "y": 40.0563,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9015,8 +9047,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_02_uid95",
       "kind": "challenge",
-      "x": 14.6515,
-      "y": 44.9018,
+      "x": 14.4191,
+      "y": 44.9486,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9031,8 +9063,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_04_uid97",
       "kind": "secret",
-      "x": 5.214,
-      "y": 2.4883,
+      "x": 4.9995,
+      "y": 2.5304,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9047,8 +9079,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_03_uid96",
       "kind": "wall",
-      "x": 22.0431,
-      "y": 20.9207,
+      "x": 21.7604,
+      "y": 20.9757,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9063,8 +9095,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_30_uid125",
       "kind": "secret",
-      "x": 13.4232,
-      "y": 4.5755,
+      "x": 13.1002,
+      "y": 4.6219,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9079,8 +9111,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_09_uid102",
       "kind": "secret",
-      "x": 32.4648,
-      "y": 19.8284,
+      "x": 32.1059,
+      "y": 19.8792,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9095,8 +9127,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_05_uid98",
       "kind": "secret",
-      "x": 20.8039,
-      "y": 8.8179,
+      "x": 20.7275,
+      "y": 8.8693,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9111,8 +9143,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_10_uid103",
       "kind": "wall",
-      "x": 28.7581,
-      "y": 3.6783,
+      "x": 28.7212,
+      "y": 3.7283,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9127,8 +9159,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_050_uid278",
       "kind": "wall",
-      "x": 7.4575,
-      "y": 0.9934,
+      "x": 7.6506,
+      "y": 1.1025,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9143,8 +9175,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_10_uid103",
       "kind": "puzzle",
-      "x": 16.1928,
-      "y": 11.8021,
+      "x": 16.1404,
+      "y": 11.8545,
       "saveId": "",
       "itemId": "",
       "state": "progression",
@@ -9161,8 +9193,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_06_uid99",
       "kind": "puzzle",
-      "x": 35.9688,
-      "y": 10.8903,
+      "x": 35.8221,
+      "y": 10.9423,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9177,8 +9209,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_15_uid260",
       "kind": "challenge",
-      "x": 11.7773,
-      "y": 25.9245,
+      "x": 12.2262,
+      "y": 26.5442,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9193,8 +9225,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
       "kind": "secret",
-      "x": 15.0043,
-      "y": 4.8683,
+      "x": 14.6832,
+      "y": 4.9262,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9209,8 +9241,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_24_uid119",
       "kind": "puzzle",
-      "x": 10.2955,
-      "y": 6.3604,
+      "x": 9.9389,
+      "y": 6.4187,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9225,8 +9257,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_20_uid113",
       "kind": "wall",
-      "x": 5.0042,
-      "y": 1.8011,
+      "x": 4.6113,
+      "y": 1.8581,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9241,8 +9273,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_17_uid110",
       "kind": "secret",
-      "x": 16.8549,
-      "y": 2.6301,
+      "x": 16.4471,
+      "y": 2.6873,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9257,8 +9289,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_17_uid110",
       "kind": "challenge",
-      "x": 12.8607,
-      "y": 8.5986,
+      "x": 12.4478,
+      "y": 8.6576,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9273,8 +9305,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
       "kind": "puzzle",
-      "x": 24.7403,
-      "y": 9.9249,
+      "x": 24.4313,
+      "y": 9.9843,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9289,8 +9321,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
       "kind": "secret",
-      "x": 20.1636,
-      "y": 20.3699,
+      "x": 19.8489,
+      "y": 20.4323,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9305,8 +9337,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_07_uid100",
       "kind": "challenge",
-      "x": 4.5826,
-      "y": 27.9669,
+      "x": 4.3377,
+      "y": 28.0239,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9321,8 +9353,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_07_uid100",
       "kind": "puzzle",
-      "x": 11.739,
-      "y": 13.1285,
+      "x": 11.503,
+      "y": 13.1812,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9337,8 +9369,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_07_uid100",
       "kind": "secret",
-      "x": 8.7433,
-      "y": 21.3352,
+      "x": 8.5036,
+      "y": 21.3903,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9353,8 +9385,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_06_uid99",
       "kind": "puzzle",
-      "x": 20.4078,
-      "y": 24.5682,
+      "x": 20.2418,
+      "y": 24.6242,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9369,8 +9401,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_15_uid108",
       "kind": "wall",
-      "x": 17.6273,
-      "y": 1.8305,
+      "x": 17.4876,
+      "y": 1.8951,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9385,8 +9417,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_15_uid108",
       "kind": "puzzle",
-      "x": 11.4695,
-      "y": 22.8033,
+      "x": 11.3222,
+      "y": 22.874,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9401,8 +9433,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_25_uid120",
       "kind": "secret",
-      "x": 11.4007,
-      "y": 9.3447,
+      "x": 11.3127,
+      "y": 9.4039,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9415,10 +9447,10 @@
     {
       "id": "reference:196466",
       "world": "World_Biome_08_Library",
-      "room": "World_Biome_08_Library_Library_MVP_Room_31_uid127",
+      "room": "World_Biome_08_Library_Library_MVP_Room_11_uid104",
       "kind": "wall",
-      "x": 14.4453,
-      "y": 2.8935,
+      "x": 14.3907,
+      "y": 15.9546,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9433,8 +9465,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "secret",
-      "x": 8.1355,
-      "y": 11.5829,
+      "x": 8.1325,
+      "y": 11.6427,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9449,8 +9481,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "secret",
-      "x": 41.5875,
-      "y": 8.0183,
+      "x": 41.6259,
+      "y": 8.0771,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9465,8 +9497,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "wall",
-      "x": 33.0997,
-      "y": 1.884,
+      "x": 33.1276,
+      "y": 1.941,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9481,8 +9513,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_14_uid107",
       "kind": "wall",
-      "x": 13.9749,
-      "y": 1.65,
+      "x": 14.0386,
+      "y": 1.7108,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9497,8 +9529,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_14_uid107",
       "kind": "puzzle",
-      "x": 23.8774,
-      "y": 8.2817,
+      "x": 23.9533,
+      "y": 8.3444,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9513,8 +9545,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "puzzle",
-      "x": 23.2804,
-      "y": 27.4161,
+      "x": 23.2962,
+      "y": 27.4805,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9529,8 +9561,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "secret",
-      "x": 26.3593,
-      "y": 36.7833,
+      "x": 26.3789,
+      "y": 36.8505,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9545,8 +9577,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_16_uid109",
       "kind": "puzzle",
-      "x": 16.0697,
-      "y": 13.2408,
+      "x": 16.1953,
+      "y": 13.3011,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9561,8 +9593,8 @@
       "world": "World_Biome_06_MainHall",
       "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1345_uid199",
       "kind": "objective",
-      "x": 22.9351,
-      "y": 4.5798,
+      "x": 23.1549,
+      "y": 5.1402,
       "saveId": "",
       "itemId": "",
       "state": "progression",
@@ -9579,8 +9611,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_16_uid109",
       "kind": "secret",
-      "x": 19.8976,
-      "y": 23.1884,
+      "x": 20.0279,
+      "y": 23.2516,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -9611,8 +9643,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_06_uid99",
       "kind": "puzzle",
-      "x": 51.613,
-      "y": 24.734,
+      "x": 51.4857,
+      "y": 24.79,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9627,8 +9659,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_15_uid108",
       "kind": "puzzle",
-      "x": 11.3031,
-      "y": 33.8285,
+      "x": 11.1555,
+      "y": 33.9024,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9659,8 +9691,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_18_uid111",
       "kind": "wall",
-      "x": 17.1136,
-      "y": 24.9439,
+      "x": 16.9139,
+      "y": 25.0114,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9675,8 +9707,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_36_LisaLab_uid138",
       "kind": "lore",
-      "x": 15.4927,
-      "y": 0.9334,
+      "x": 15.4691,
+      "y": 1.0015,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -9755,8 +9787,8 @@
       "world": "World_Biome_08_Library",
       "room": "World_Biome_08_Library_Library_MVP_Room_13_uid106",
       "kind": "challenge",
-      "x": 38.4254,
-      "y": 41.2597,
+      "x": 38.4599,
+      "y": 41.3282,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10018,7 +10050,7 @@
       "state": "unknown",
       "secretIndex": -1,
       "progressKeys": [],
-      "name": "Bell of Courage",
+      "name": "Bell",
       "source": "reference",
       "verified": false
     },
@@ -10171,8 +10203,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
       "kind": "wall",
-      "x": 11.0689,
-      "y": 10.6527,
+      "x": 11.0891,
+      "y": 10.4265,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10187,8 +10219,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room44_uid137",
       "kind": "wall",
-      "x": 18.6682,
-      "y": 21.7652,
+      "x": 18.6818,
+      "y": 21.104,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10197,6 +10229,22 @@
       "name": "Break from the west",
       "source": "reference",
       "verified": true
+    },
+    {
+      "id": "reference:197038",
+      "world": "World_Biome_01_Streets_Poor",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room10_uid92",
+      "kind": "challenge",
+      "x": 34.9723,
+      "y": 21.0773,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Combat Room",
+      "source": "reference",
+      "verified": false
     },
     {
       "id": "reference:197059",
@@ -10283,8 +10331,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room43_uid136",
       "kind": "secret",
-      "x": 69.4514,
-      "y": 51.3371,
+      "x": 69.4621,
+      "y": 50.846,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10363,8 +10411,8 @@
       "world": "World_Biome_01_Streets_Poor",
       "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
       "kind": "puzzle",
-      "x": 55.807,
-      "y": 23.8511,
+      "x": 55.841,
+      "y": 23.1522,
       "saveId": "",
       "itemId": "",
       "state": "progression",
@@ -10397,8 +10445,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room28_uid116",
       "kind": "secret",
-      "x": 5.6856,
-      "y": 7.6782,
+      "x": 5.6808,
+      "y": 7.6786,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -10445,8 +10493,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room28_uid116",
       "kind": "secret",
-      "x": 40.5186,
-      "y": 26.0332,
+      "x": 40.5288,
+      "y": 26.0305,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -10461,8 +10509,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_170_uid150",
       "kind": "secret",
-      "x": 17.4587,
-      "y": 1.0062,
+      "x": 17.5415,
+      "y": 1.001,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -10477,8 +10525,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room34_uid122",
       "kind": "challenge",
-      "x": 12.605,
-      "y": -8.6866,
+      "x": 12.727,
+      "y": -8.6924,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10509,8 +10557,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery2_Room41_uid131",
       "kind": "challenge",
-      "x": 21.7675,
-      "y": 18.8075,
+      "x": 21.9347,
+      "y": 18.7925,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10557,8 +10605,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_050_uid136",
       "kind": "wall",
-      "x": 42.7301,
-      "y": 2.3542,
+      "x": 42.6691,
+      "y": 2.342,
       "saveId": "",
       "itemId": "",
       "state": "unknown",
@@ -10589,8 +10637,8 @@
       "world": "World_Biome_02_InnocentsCemetery",
       "room": "World_Biome_02_InnocentsCemetery_Cemetery_MVP_Room_070_uid138",
       "kind": "secret",
-      "x": 14.6464,
-      "y": 3.5309,
+      "x": 14.5631,
+      "y": 3.5208,
       "saveId": "",
       "itemId": "",
       "state": "secret",
@@ -10699,9 +10747,9 @@
     {
       "id": "reference:197297",
       "world": "World_Biome_05_NotreDame",
-      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_175_uid105",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_055_uid135",
       "kind": "wall",
-      "x": 7.6148,
+      "x": 55.6148,
       "y": 1.3652,
       "saveId": "",
       "itemId": "",
@@ -10791,362 +10839,318 @@
       "name": "Hidden area",
       "source": "reference",
       "verified": true
+    },
+    {
+      "id": "reference:197371",
+      "world": "World_Biome_08_Library",
+      "room": "World_Biome_08_Library_Library_MVP_Room_23_uid118",
+      "kind": "challenge",
+      "x": 19.4228,
+      "y": 36.2886,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Platforming Challenge",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197402",
+      "world": "World_Biome_03_Catacombs",
+      "room": "World_Biome_03_Catacombs_Catacombs_MVP_Room39_uid149",
+      "kind": "challenge",
+      "x": 25.3382,
+      "y": 8.5989,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Combat Room",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197436",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_560_uid196",
+      "kind": "secret",
+      "x": 19.6675,
+      "y": -4.1011,
+      "saveId": "",
+      "itemId": "",
+      "state": "secret",
+      "secretIndex": 1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197463",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_05_uid250",
+      "kind": "challenge",
+      "x": 13.83,
+      "y": 2.3008,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Platforming Challenge",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197488",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1903_uid207",
+      "kind": "challenge",
+      "x": 34.0991,
+      "y": 17.9105,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Platforming Challenge",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197494",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_07_uid252",
+      "kind": "puzzle",
+      "x": 11.8117,
+      "y": 13.7252,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Alucard Portrait Puzzle",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197505",
+      "world": "World_Biome_01_Streets_Poor",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room01_uid82",
+      "kind": "secret",
+      "x": 70.1123,
+      "y": 29.1882,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197508",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
+      "kind": "wall",
+      "x": -5.4441,
+      "y": 7.4709,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Break from the east",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197510",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1345_uid199",
+      "kind": "secret",
+      "x": 39.8199,
+      "y": -4.8725,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197511",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_1345_uid199",
+      "kind": "challenge",
+      "x": 33.1041,
+      "y": 3.745,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Combat Room",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197515",
+      "world": "World_Biome_01_Streets_Poor",
+      "room": "World_Biome_01_Streets_Poor_StreetsPoorV2_Room34_uid127",
+      "kind": "secret",
+      "x": 64.5452,
+      "y": 2.9977,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197516",
+      "world": "World_Biome_06_MainHall",
+      "room": "World_Biome_06_MainHall_MainHall_MVP_Room_03_uid248",
+      "kind": "secret",
+      "x": 5.0856,
+      "y": 79.6935,
+      "saveId": "",
+      "itemId": "",
+      "state": "secret",
+      "secretIndex": 2,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197519",
+      "world": "World_Biome_08_Library",
+      "room": "World_Biome_08_Library_Library_MVP_Room_23_uid118",
+      "kind": "puzzle",
+      "x": 31.5038,
+      "y": 19.8703,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Puzzle",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197520",
+      "world": "World_Biome_08_Library",
+      "room": "World_Biome_08_Library_Library_MVP_Room_23_uid118",
+      "kind": "secret",
+      "x": 36.0029,
+      "y": 30.1525,
+      "saveId": "",
+      "itemId": "",
+      "state": "secret",
+      "secretIndex": 0,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197521",
+      "world": "World_Biome_08_Library",
+      "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
+      "kind": "secret",
+      "x": 31.7632,
+      "y": 30.051,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197524",
+      "world": "World_Biome_08_Library",
+      "room": "World_Biome_08_Library_Library_MVP_Room_21_uid116",
+      "kind": "challenge",
+      "x": 12.6836,
+      "y": 32.7045,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Platforming Challenge",
+      "source": "reference",
+      "verified": true
+    },
+    {
+      "id": "reference:197542",
+      "world": "World_Biome_05_NotreDame",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_120_uid98",
+      "kind": "objective",
+      "x": 11.0818,
+      "y": 79.5295,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Bell",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197544",
+      "world": "World_Biome_05_NotreDame",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_048_uid130",
+      "kind": "objective",
+      "x": 30.0584,
+      "y": 81.0012,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Bell",
+      "source": "reference",
+      "verified": false
+    },
+    {
+      "id": "reference:197545",
+      "world": "World_Biome_05_NotreDame",
+      "room": "World_Biome_05_NotreDame_NotreDame_MVP_Room_055_uid135",
+      "kind": "secret",
+      "x": 8.9971,
+      "y": 2.101,
+      "saveId": "",
+      "itemId": "",
+      "state": "unknown",
+      "secretIndex": -1,
+      "progressKeys": [],
+      "name": "Illusory Wall",
+      "source": "reference",
+      "verified": false
     }
   ],
   "items": {
-    "LaserScytheSlash": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Death",
-      "name": "Soul Harvest"
-    },
-    "WeaponTwoHandedTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier3",
-      "name": "Durandal"
-    },
-    "WeaponDualWieldTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Almace and Hauteclaire"
-    },
-    "WeaponOneHandedTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Joyeuse"
-    },
-    "WeaponFistTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier3",
-      "name": "Fists of Talos"
-    },
-    "WeaponSpearTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Gungnir"
-    },
-    "WeaponAndShieldTier3_Doppelganger": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Arondight and Lancelot's Shield"
-    },
-    "BloodSpikes": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Carmilla",
-      "name": "Blood Spikes"
-    },
-    "BoomerangCross": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Leon",
-      "name": "Holy Cross"
-    },
-    "CursedFireBall": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Rose",
-      "name": "Cursed Flame"
-    },
-    "Detainment": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_SaintLouis",
-      "name": "Chains of Justice"
-    },
-    "FireSeismicWave": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Joan",
-      "name": "Infernal Pyre"
-    },
-    "FreezingMist": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Ferryman",
-      "name": "Freezing Path"
-    },
-    "GiantFist": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Talos",
-      "name": "Fist of Talos"
-    },
-    "GlassArmor": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Arthur",
-      "name": "Stained-Glass Shield"
-    },
-    "InvocationStone": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Brauner",
-      "name": "Masterpiece"
-    },
     "LifeDrain": {
       "kind": "arcana",
       "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
       "iconName": "T_UI_Items_Spells_Atlas_Succubus",
       "name": "Life Drain"
-    },
-    "RageIncarnation": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Doppelganger",
-      "name": "Absolution"
-    },
-    "PetrifyingRay": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Medusa",
-      "name": "Petrifying Gaze"
-    },
-    "PocketMirror": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Eleanor",
-      "name": "Mirror Walk"
-    },
-    "RiseAndFall": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Isaac",
-      "name": "Chronomantic Dive"
-    },
-    "TargetingChargingWheels": {
-      "kind": "arcana",
-      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
-      "iconName": "T_UI_Items_Spells_Atlas_Mammon",
-      "name": "Wheel of Chaos"
-    },
-    "Charm_BatPet": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_38",
-      "name": "Vampire's Fang"
-    },
-    "Charm_BoostDamageAfterBreak": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_30",
-      "name": "Obsidian Fang"
-    },
-    "Charm_BoostDamageAfterParry": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_25",
-      "name": "Cursed Coin"
-    },
-    "Charm_BoostDamageAfterSpell": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_35",
-      "name": "Twilight Gem"
-    },
-    "Charm_BoostDamageBackHit": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_9",
-      "name": "Vile Trinket"
-    },
-    "Charm_BoostDamageBackReduceDamageFront": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_4",
-      "name": "Pale Thorn"
-    },
-    "Charm_BoostDamageButReduceLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_1",
-      "name": "Beelzebub's Seal"
-    },
-    "Charm_BoostDamageFullLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_34",
-      "name": "Forsaken Ring"
-    },
-    "Charm_BoostDamageOnControlledMob": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_26",
-      "name": "Abyssal Eye"
-    },
-    "Charm_BoostDamageOnLowLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_20",
-      "name": "Specter's Whisper"
-    },
-    "Charm_BoostDamageOnMobFullLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_36",
-      "name": "Sinister Rune"
-    },
-    "Charm_BoostDamagePerEmptyPotion": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_13",
-      "name": "Witch's Brew"
-    },
-    "Charm_BoostDamageWhenUnGrounded": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_19",
-      "name": "Raven's Feather"
-    },
-    "Charm_BoostDefenseAfterGettingHit": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_29",
-      "name": "Haunting Relic"
-    },
-    "Charm_BoostDefenseForTrap": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_23",
-      "name": "Ghostly Pendant"
-    },
-    "Charm_BoostDefenseOnFullLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_24",
-      "name": "Dark Sigil"
-    },
-    "Charm_BoostDefenseOnLowLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_5",
-      "name": "Shadow Veil"
-    },
-    "Charm_BoostManaKillMob": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_15",
-      "name": "Revenant's Shard"
-    },
-    "DEPRECATED_Charm_BoostManaOnDmgLowLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_31",
-      "name": "Soul Fragment"
-    },
-    "Charm_BoostSpeedAfterSave": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_0",
-      "name": "Sand Charm"
-    },
-    "Charm_BoostSpeedAfterWhip": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_8",
-      "name": "Hollow Bone"
-    },
-    "Charm_BoostSpeedLowMana": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_32",
-      "name": "Dusk Amulet"
-    },
-    "DEPRECATED_Charm_BoostXPKillMob": {
-      "kind": "relic",
-      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
-      "iconName": "",
-      "name": "Lorem Ipsum"
-    },
-    "Charm_BoostXPKillMobFullLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_21",
-      "name": "Moonlit Shard"
-    },
-    "Charm_ChestRecover": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_10",
-      "name": "Crypt Key"
-    },
-    "Charm_ClampMCMana": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_16",
-      "name": "Infernal Medallion"
-    },
-    "Charm_ConsummableChanceBoost": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_2",
-      "name": "Crystallized Blood"
-    },
-    "Charm_ExtraPotionAfterSave": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_27",
-      "name": "Blood Vial"
-    },
-    "Charm_GainHPHitMobNoPotion": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_37",
-      "name": "Blackened Heart"
-    },
-    "Charm_GetManaFromDmgReceived": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_14",
-      "name": "Banshee's Wail"
-    },
-    "Charm_HealthPotionHealFullLife": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_12",
-      "name": "Witch's Knot"
-    },
-    "Charm_InvulnerabilityAfterSave": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_39",
-      "name": "Eldritch Talisman"
-    },
-    "Charm_KillMobBoostDamageInflicted": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_40",
-      "name": "Necro Charm"
-    },
-    "Charm_KillMobBoostSpeed": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_33",
-      "name": "Mourning Bead"
-    },
-    "Charm_KillMobRevengeHeal": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_17",
-      "name": "Wraith's Tear"
-    },
-    "Charm_LongerMobStagger": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_22",
-      "name": "Ebony Claw"
-    },
-    "Charm_NerfDmgOnLowMana": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_7",
-      "name": "Midnight Tear"
     },
     "Charm_ParryGiveMana": {
       "kind": "relic",
@@ -11154,179 +11158,11 @@
       "iconName": "CharmsIcons_28",
       "name": "Grim Token"
     },
-    "Charm_PotionGiveMana": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_18",
-      "name": "Nightshade"
-    },
-    "DEPRECATED_Charm_PotionHealBoost": {
-      "kind": "relic",
-      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
-      "iconName": "",
-      "name": "Lorem Ipsum"
-    },
-    "Charm_ReduceSpellManaCostSpam": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_3",
-      "name": "Lich's Mark"
-    },
-    "Charm_RevealSecret": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_6",
-      "name": "Gloomstone"
-    },
-    "Charm_RoomChangeResetMobSpawner": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_11",
-      "name": "Phantom Ring"
-    },
-    "Charm_TankOneHit": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_44",
-      "name": "Family's Grace"
-    },
-    "MammonKeyCrossFire": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_43",
-      "name": "Oozing Eye"
-    },
-    "MammonKeyHoming": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_41",
-      "name": "Trembling Eye"
-    },
-    "MammonKeyMines": {
-      "kind": "relic",
-      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
-      "iconName": "CharmsIcons_42",
-      "name": "Thrilling Eye"
-    },
-    "UniqueItemID": {
-      "kind": "relic",
-      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
-      "iconName": "T_UI_Items_GenericCharmIcon",
-      "name": "Lorem Ipsum"
-    },
-    "AerialDash": {
-      "kind": "ability",
-      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
-      "iconName": "PlayerStatus_VaniaIcons_Dash",
-      "name": "Aerial Rush"
-    },
-    "DoubleJump": {
-      "kind": "ability",
-      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
-      "iconName": "PlayerStatus_VaniaIcons_DoubleJump",
-      "name": "Double Jump"
-    },
-    "LightCrash": {
-      "kind": "ability",
-      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
-      "iconName": "PlayerStatus_VaniaIcons_Stomp",
-      "name": "Smash"
-    },
-    "VaniaLight": {
-      "kind": "ability",
-      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
-      "iconName": "PlayerStatus_VaniaIcons_Light",
-      "name": "Holy Light"
-    },
-    "WhipPendulum": {
-      "kind": "ability",
-      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
-      "iconName": "PlayerStatus_VaniaIcons_Whip",
-      "name": "Arcane Whip"
-    },
-    "WeaponAndShield": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponAndShield"
-    },
-    "WeaponAndShieldBase": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponAndShieldBase"
-    },
-    "WeaponAndShieldTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier1",
-      "name": "Rusted Harp\u00e8 and Aegis"
-    },
-    "WeaponAndShieldTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier2",
-      "name": "Fleuret and Tower Shield"
-    },
-    "WeaponAndShieldTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier3",
-      "name": "Arondight and Lancelot's Shield"
-    },
-    "WeaponAndShieldTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier4",
-      "name": "Alucard's Sword and Shield"
-    },
-    "WeaponDualWield": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponDualWield"
-    },
-    "DualSword": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "DualSword"
-    },
-    "WeaponDualWieldTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier1",
-      "name": "Pair of Longswords"
-    },
-    "WeaponDualWieldTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier2",
-      "name": "Rapiers"
-    },
-    "WeaponDualWieldTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier3",
-      "name": "Almace and Hauteclaire"
-    },
-    "WeaponDualWieldTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier4",
-      "name": "War and Famine"
-    },
-    "WeaponFist": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponFist"
-    },
-    "WeaponFistBase": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponFistBase"
+    "GlassArmor": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Arthur",
+      "name": "Stained-Glass Shield"
     },
     "WeaponFistTier1": {
       "kind": "weapon",
@@ -11334,53 +11170,35 @@
       "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier1",
       "name": "Cestus"
     },
-    "WeaponFistTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier2",
-      "name": "Jewel Knuckles"
+    "RageIncarnation": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Doppelganger",
+      "name": "Absolution"
     },
-    "WeaponFistTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier3",
-      "name": "Fists of Talos"
+    "VaniaLight": {
+      "kind": "ability",
+      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
+      "iconName": "PlayerStatus_VaniaIcons_Light",
+      "name": "Holy Light"
     },
-    "WeaponFistTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier4",
-      "name": "Bernhard's Wrath"
+    "FreezingMist": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Ferryman",
+      "name": "Freezing Path"
     },
-    "WeaponOneHanded": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponOneHanded"
+    "WhipPendulum": {
+      "kind": "ability",
+      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
+      "iconName": "PlayerStatus_VaniaIcons_Whip",
+      "name": "Arcane Whip"
     },
-    "WeaponOneHandedTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier1",
-      "name": "Longsword"
-    },
-    "WeaponOneHandedTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier3",
-      "name": "Joyeuse"
-    },
-    "WeaponOneHandedTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier2",
-      "name": "Bastard sword"
-    },
-    "WeaponOneHandedTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier4",
-      "name": "Valmanway"
+    "PocketMirror": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Eleanor",
+      "name": "Mirror Walk"
     },
     "WeaponSpear": {
       "kind": "weapon",
@@ -11388,191 +11206,23 @@
       "iconName": "",
       "name": "WeaponSpear"
     },
-    "WeaponSpearBase": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponSpearBase"
-    },
-    "WeaponSpearTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier1",
-      "name": "Lance"
-    },
-    "WeaponSpearTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier2",
-      "name": "Halberd"
-    },
-    "WeaponSpearTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier3",
-      "name": "Gungnir"
-    },
-    "WeaponSpearTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier4",
-      "name": "Chauve-Souris"
-    },
-    "WeaponTwoHanded": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponTwoHanded"
-    },
     "WeaponTwoHandedBase": {
       "kind": "weapon",
       "iconGuid": "",
       "iconName": "",
       "name": "WeaponTwoHandedBase"
     },
-    "WeaponTwoHandedTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier2",
-      "name": "Claymore"
+    "InvocationStone": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Brauner",
+      "name": "Masterpiece"
     },
-    "WeaponTwoHandedTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier1",
-      "name": "Burnt Sword of Fierbois"
-    },
-    "WeaponTwoHandedTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier3",
-      "name": "Durandal"
-    },
-    "WeaponTwoHandedTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier4",
-      "name": "Excalibur"
-    },
-    "WeaponWhip": {
-      "kind": "weapon",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "WeaponWhip"
-    },
-    "WeaponWhipTier1": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier1",
-      "name": "Whip"
-    },
-    "WeaponWhipTier2": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier2",
-      "name": "Thorn Whip"
-    },
-    "WeaponWhipTier3": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier3",
-      "name": "Morning Star"
-    },
-    "WeaponWhipTier4": {
-      "kind": "weapon",
-      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
-      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier4",
-      "name": "Vampire Killer"
-    },
-    "CatacombsGateKeyLeon": {
-      "kind": "keepsake",
-      "iconGuid": "8feb95cfd62581640b7f0bb6e040a2f8",
-      "iconName": "T_UI_Progress_QuestItem_LeonKey",
-      "name": "The Fallen's Key"
-    },
-    "CatacombsGateKeyMedusa": {
-      "kind": "keepsake",
-      "iconGuid": "4455858d4491fcc4c83e358e20f0b313",
-      "iconName": "T_UI_Progress_QuestItem_MedusaKey",
-      "name": "The Prophetess's Key"
-    },
-    "CatacombsGateKeyJeanne": {
-      "kind": "keepsake",
-      "iconGuid": "76bce748e7635b64ea157c21ed721cf9",
-      "iconName": "T_UI_Progress_QuestItem_JeanneKey",
-      "name": "The Warrior's Key"
-    },
-    "NotreDameKey": {
-      "kind": "keepsake",
-      "iconGuid": "e876c3df6c74a3244b80992fdfeef0e8",
-      "iconName": "T_UI_Progress_QuestItem_Brush",
-      "name": "Brauner's Paintbrush"
-    },
-    "FerrymanCompletionKey": {
-      "kind": "keepsake",
-      "iconGuid": "45019ea1b90b39045b1f19c4a7958573",
-      "iconName": "T_UI_Progress_QuestItem_Obol",
-      "name": "Ferryman's Obol"
-    },
-    "Clue_Arthur_ExcaliburStele": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Feat of Strength"
-    },
-    "Clue_Brauner_StatueInstruction": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Brauner's \"Masterpiece\""
-    },
-    "Clue_Brauner_NotreDamePainting": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "A Strange Painting of Notre-Dame"
-    },
-    "Clue_Brauner_AlucardPainting": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Alucard Guides"
-    },
-    "Clue_Brauner_MainHallLocation": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Artist hides in the Main Hall"
-    },
-    "Clue_Carmilla_ToolSTheft": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Magical Brush"
-    },
-    "Clue_Carmilla_BloodPoem": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Blood Poem"
-    },
-    "Clue_Carmilla_PlanetList": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Organic Astrology"
-    },
-    "Clue_Carmilla_BraunerNote": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Carmilla in the Library"
-    },
-    "Clue_Carmilla_DiaryRequest": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Star Chart"
+    "Charm_TankOneHit": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_44",
+      "name": "Family's Grace"
     },
     "Clue_Death_MaestrosLocations": {
       "kind": "clue",
@@ -11610,65 +11260,23 @@
       "iconName": "",
       "name": "Melody Sheet for the Fugue of Notre-Dame"
     },
-    "Clue_Doppelganger_FirstCard": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "The First Card"
+    "BloodSpikes": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Carmilla",
+      "name": "Blood Spikes"
     },
-    "Clue_Doppelganger_Prophecy": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "The Prophecy"
+    "Charm_BoostDamageBackReduceDamageFront": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_4",
+      "name": "Pale Thorn"
     },
-    "Clue_Eleanor_KneelDown": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Kneeling is the Way"
-    },
-    "Clue_Eleanor_SealsLocation": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "A Sketch from Talos"
-    },
-    "Clue_Eleanor_TrueWay": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "The Reflection Deceives"
-    },
-    "Clue_Eleanor_Escaping": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Eleanor Flees to the Cemetary"
-    },
-    "Clue_Ferryman_MissingCoins": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Stolen Oboles"
-    },
-    "Clue_Isaac_BossLocation": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Isaac waits in the Clock Tower."
-    },
-    "Clue_JoanArc_TowerShortcut": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Carpenter's Crane Sketch"
-    },
-    "Clue_JoanArc_TowerLocation": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "The Warrior is at the top of the Tower."
+    "Charm_PotionGiveMana": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_18",
+      "name": "Nightshade"
     },
     "Clue_Leon_HiddenLever": {
       "kind": "clue",
@@ -11682,29 +11290,131 @@
       "iconName": "",
       "name": "A Monster terrorizes Paris"
     },
-    "Clue_Mammon_DiaryMarch": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Catacomb Relic"
+    "WeaponWhipTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier3",
+      "name": "Morning Star"
     },
-    "Clue_Mammon_DiaryJanuary": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Tomb Relic"
+    "Charm_BoostDamageBackHit": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_9",
+      "name": "Vile Trinket"
     },
-    "Clue_Mammon_DiaryFebruary": {
-      "kind": "clue",
-      "iconGuid": "",
-      "iconName": "",
-      "name": "Hospital Relic"
+    "Charm_BoostDefenseOnLowLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_5",
+      "name": "Shadow Veil"
     },
-    "Clue_Mammon_EyesDoor": {
+    "WeaponWhipTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier4",
+      "name": "Vampire Killer"
+    },
+    "Clue_Brauner_StatueInstruction": {
       "kind": "clue",
       "iconGuid": "",
       "iconName": "",
-      "name": "A Door made of Flesh and Eyes"
+      "name": "Brauner's \"Masterpiece\""
+    },
+    "Clue_Brauner_NotreDamePainting": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "A Strange Painting of Notre-Dame"
+    },
+    "Clue_Brauner_AlucardPainting": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Alucard Guides"
+    },
+    "Clue_Brauner_MainHallLocation": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Artist hides in the Main Hall"
+    },
+    "Charm_BoostDamageOnLowLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_20",
+      "name": "Specter's Whisper"
+    },
+    "Charm_BoostDamageOnControlledMob": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_26",
+      "name": "Abyssal Eye"
+    },
+    "Clue_Doppelganger_FirstCard": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "The First Card"
+    },
+    "Clue_Doppelganger_Prophecy": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "The Prophecy"
+    },
+    "Charm_KillMobBoostSpeed": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_33",
+      "name": "Mourning Bead"
+    },
+    "Charm_BoostDamageOnMobFullLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_36",
+      "name": "Sinister Rune"
+    },
+    "WeaponFistBase": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponFistBase"
+    },
+    "WeaponTwoHanded": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponTwoHanded"
+    },
+    "DualSword": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "DualSword"
+    },
+    "WeaponDualWieldTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier3",
+      "name": "Almace and Hauteclaire"
+    },
+    "Charm_BoostSpeedLowMana": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_32",
+      "name": "Dusk Amulet"
+    },
+    "Charm_RoomChangeResetMobSpawner": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_11",
+      "name": "Phantom Ring"
+    },
+    "Clue_SaintLouis_ScaleText": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Balancing the Scales of Justice"
     },
     "Clue_Medusa_SpecialAttack": {
       "kind": "clue",
@@ -11730,17 +11440,173 @@
       "iconName": "",
       "name": "Roman Baths"
     },
-    "Clue_SaintLouis_ScaleText": {
-      "kind": "clue",
+    "WeaponAndShield": {
+      "kind": "weapon",
       "iconGuid": "",
       "iconName": "",
-      "name": "Balancing the Scales of Justice"
+      "name": "WeaponAndShield"
     },
-    "Clue_Succubus_HoMLocation": {
+    "Charm_BoostDamageAfterBreak": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_30",
+      "name": "Obsidian Fang"
+    },
+    "UniqueItemID": {
+      "kind": "relic",
+      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
+      "iconName": "T_UI_Items_GenericCharmIcon",
+      "name": "Lorem Ipsum"
+    },
+    "Charm_RevealSecret": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_6",
+      "name": "Gloomstone"
+    },
+    "WeaponWhipTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier1",
+      "name": "Whip"
+    },
+    "Clue_Ferryman_MissingCoins": {
       "kind": "clue",
       "iconGuid": "",
       "iconName": "",
-      "name": "The Temptress guards the Hall of Mirrors"
+      "name": "Stolen Oboles"
+    },
+    "DEPRECATED_Charm_BoostXPKillMob": {
+      "kind": "relic",
+      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
+      "iconName": "",
+      "name": "Lorem Ipsum"
+    },
+    "WeaponTwoHandedTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier4",
+      "name": "Excalibur"
+    },
+    "Charm_ChestRecover": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_10",
+      "name": "Crypt Key"
+    },
+    "Clue_Carmilla_ToolSTheft": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Magical Brush"
+    },
+    "Clue_Carmilla_BloodPoem": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Blood Poem"
+    },
+    "Clue_Carmilla_PlanetList": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Organic Astrology"
+    },
+    "Clue_Carmilla_BraunerNote": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Carmilla in the Library"
+    },
+    "Clue_Carmilla_DiaryRequest": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Star Chart"
+    },
+    "WeaponOneHanded": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponOneHanded"
+    },
+    "WeaponOneHandedTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier1",
+      "name": "Longsword"
+    },
+    "Charm_BoostDamageAfterParry": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_25",
+      "name": "Cursed Coin"
+    },
+    "BoomerangCross": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Leon",
+      "name": "Holy Cross"
+    },
+    "Clue_JoanArc_TowerShortcut": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Carpenter's Crane Sketch"
+    },
+    "Clue_JoanArc_TowerLocation": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "The Warrior is at the top of the Tower."
+    },
+    "WeaponAndShieldTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier1",
+      "name": "Rusted Harp\u00e8 and Aegis"
+    },
+    "LaserScytheSlash": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Death",
+      "name": "Soul Harvest"
+    },
+    "Charm_GetManaFromDmgReceived": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_14",
+      "name": "Banshee's Wail"
+    },
+    "Charm_BoostDefenseOnFullLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_24",
+      "name": "Dark Sigil"
+    },
+    "WeaponDualWield": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponDualWield"
+    },
+    "WeaponFistTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier3",
+      "name": "Fists of Talos"
+    },
+    "WeaponOneHandedTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier4",
+      "name": "Valmanway"
+    },
+    "FireSeismicWave": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Joan",
+      "name": "Infernal Pyre"
     },
     "Clue_Talos_ArchitectShortcut": {
       "kind": "clue",
@@ -11753,12 +11619,498 @@
       "iconGuid": "",
       "iconName": "",
       "name": "Builder flees to the Clock Tower"
+    },
+    "WeaponDualWieldTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier4",
+      "name": "War and Famine"
+    },
+    "Clue_Mammon_DiaryMarch": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Catacomb Relic"
+    },
+    "Clue_Mammon_DiaryJanuary": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Tomb Relic"
+    },
+    "Clue_Mammon_DiaryFebruary": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Hospital Relic"
+    },
+    "Clue_Mammon_EyesDoor": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "A Door made of Flesh and Eyes"
+    },
+    "Charm_ClampMCMana": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_16",
+      "name": "Infernal Medallion"
+    },
+    "Charm_ReduceSpellManaCostSpam": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_3",
+      "name": "Lich's Mark"
+    },
+    "WeaponAndShieldBase": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponAndShieldBase"
+    },
+    "WeaponTwoHandedTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier2",
+      "name": "Claymore"
+    },
+    "WeaponTwoHandedTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier1",
+      "name": "Burnt Sword of Fierbois"
+    },
+    "CursedFireBall": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Rose",
+      "name": "Cursed Flame"
+    },
+    "WeaponOneHandedTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier3",
+      "name": "Joyeuse"
+    },
+    "WeaponOneHandedTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_1H_Tier2",
+      "name": "Bastard sword"
+    },
+    "Charm_BoostXPKillMobFullLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_21",
+      "name": "Moonlit Shard"
+    },
+    "WeaponFistTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier4",
+      "name": "Bernhard's Wrath"
+    },
+    "Charm_BoostDamageFullLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_34",
+      "name": "Forsaken Ring"
+    },
+    "Charm_BoostManaKillMob": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_15",
+      "name": "Revenant's Shard"
+    },
+    "MammonKeyMines": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_42",
+      "name": "Thrilling Eye"
+    },
+    "Charm_InvulnerabilityAfterSave": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_39",
+      "name": "Eldritch Talisman"
+    },
+    "LightCrash": {
+      "kind": "ability",
+      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
+      "iconName": "PlayerStatus_VaniaIcons_Stomp",
+      "name": "Smash"
+    },
+    "WeaponDualWieldTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier2",
+      "name": "Rapiers"
+    },
+    "MammonKeyHoming": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_41",
+      "name": "Trembling Eye"
+    },
+    "WeaponSpearTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier2",
+      "name": "Halberd"
+    },
+    "WeaponWhip": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponWhip"
+    },
+    "WeaponFistTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier2",
+      "name": "Jewel Knuckles"
+    },
+    "Charm_BoostDefenseAfterGettingHit": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_29",
+      "name": "Haunting Relic"
+    },
+    "Charm_BoostDamagePerEmptyPotion": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_13",
+      "name": "Witch's Brew"
+    },
+    "Clue_Succubus_HoMLocation": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "The Temptress guards the Hall of Mirrors"
+    },
+    "Charm_ExtraPotionAfterSave": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_27",
+      "name": "Blood Vial"
+    },
+    "Charm_HealthPotionHealFullLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_12",
+      "name": "Witch's Knot"
+    },
+    "WeaponTwoHandedTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier3",
+      "name": "Durandal"
+    },
+    "WeaponDualWieldTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Almace and Hauteclaire"
+    },
+    "WeaponOneHandedTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Joyeuse"
+    },
+    "WeaponFistTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Fist_Tier3",
+      "name": "Fists of Talos"
+    },
+    "WeaponSpearTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Gungnir"
+    },
+    "WeaponAndShieldTier3_Doppelganger": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Arondight and Lancelot's Shield"
+    },
+    "RiseAndFall": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Isaac",
+      "name": "Chronomantic Dive"
+    },
+    "Charm_BoostDamageAfterSpell": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_35",
+      "name": "Twilight Gem"
+    },
+    "WeaponAndShieldTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier4",
+      "name": "Alucard's Sword and Shield"
+    },
+    "Charm_ConsummableChanceBoost": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_2",
+      "name": "Crystallized Blood"
+    },
+    "WeaponFist": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponFist"
+    },
+    "CatacombsGateKeyLeon": {
+      "kind": "keepsake",
+      "iconGuid": "8feb95cfd62581640b7f0bb6e040a2f8",
+      "iconName": "T_UI_Progress_QuestItem_LeonKey",
+      "name": "The Fallen's Key"
+    },
+    "CatacombsGateKeyMedusa": {
+      "kind": "keepsake",
+      "iconGuid": "4455858d4491fcc4c83e358e20f0b313",
+      "iconName": "T_UI_Progress_QuestItem_MedusaKey",
+      "name": "The Prophetess's Key"
+    },
+    "CatacombsGateKeyJeanne": {
+      "kind": "keepsake",
+      "iconGuid": "76bce748e7635b64ea157c21ed721cf9",
+      "iconName": "T_UI_Progress_QuestItem_JeanneKey",
+      "name": "The Warrior's Key"
+    },
+    "NotreDameKey": {
+      "kind": "keepsake",
+      "iconGuid": "e876c3df6c74a3244b80992fdfeef0e8",
+      "iconName": "T_UI_Progress_QuestItem_Brush",
+      "name": "Brauner's Paintbrush"
+    },
+    "FerrymanCompletionKey": {
+      "kind": "keepsake",
+      "iconGuid": "45019ea1b90b39045b1f19c4a7958573",
+      "iconName": "T_UI_Progress_QuestItem_Obol",
+      "name": "Ferryman's Obol"
+    },
+    "WeaponSpearBase": {
+      "kind": "weapon",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "WeaponSpearBase"
+    },
+    "Charm_BoostDamageButReduceLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_1",
+      "name": "Beelzebub's Seal"
+    },
+    "WeaponAndShieldTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier3",
+      "name": "Arondight and Lancelot's Shield"
+    },
+    "Clue_Eleanor_KneelDown": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Kneeling is the Way"
+    },
+    "Clue_Eleanor_SealsLocation": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "A Sketch from Talos"
+    },
+    "Clue_Eleanor_TrueWay": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "The Reflection Deceives"
+    },
+    "Clue_Eleanor_Escaping": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Eleanor Flees to the Cemetary"
+    },
+    "AerialDash": {
+      "kind": "ability",
+      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
+      "iconName": "PlayerStatus_VaniaIcons_Dash",
+      "name": "Aerial Rush"
+    },
+    "WeaponSpearTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier3",
+      "name": "Gungnir"
+    },
+    "Charm_KillMobRevengeHeal": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_17",
+      "name": "Wraith's Tear"
+    },
+    "Charm_BoostSpeedAfterSave": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_0",
+      "name": "Sand Charm"
+    },
+    "Charm_NerfDmgOnLowMana": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_7",
+      "name": "Midnight Tear"
+    },
+    "Clue_Isaac_BossLocation": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Isaac waits in the Clock Tower."
+    },
+    "Clue_Arthur_ExcaliburStele": {
+      "kind": "clue",
+      "iconGuid": "",
+      "iconName": "",
+      "name": "Feat of Strength"
+    },
+    "Charm_BatPet": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_38",
+      "name": "Vampire's Fang"
+    },
+    "WeaponWhipTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Whip_Tier2",
+      "name": "Thorn Whip"
+    },
+    "DEPRECATED_Charm_BoostManaOnDmgLowLife": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_31",
+      "name": "Soul Fragment"
+    },
+    "Charm_KillMobBoostDamageInflicted": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_40",
+      "name": "Necro Charm"
+    },
+    "MammonKeyCrossFire": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_43",
+      "name": "Oozing Eye"
+    },
+    "Charm_BoostDamageWhenUnGrounded": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_19",
+      "name": "Raven's Feather"
+    },
+    "WeaponTwoHandedTier3": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_2H_Tier3",
+      "name": "Durandal"
+    },
+    "TargetingChargingWheels": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Mammon",
+      "name": "Wheel of Chaos"
+    },
+    "Charm_GainHPHitMobNoPotion": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_37",
+      "name": "Blackened Heart"
+    },
+    "Charm_BoostDefenseForTrap": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_23",
+      "name": "Ghostly Pendant"
+    },
+    "DEPRECATED_Charm_PotionHealBoost": {
+      "kind": "relic",
+      "iconGuid": "67e1a3e022b9adc419060f76672c0fce",
+      "iconName": "",
+      "name": "Lorem Ipsum"
+    },
+    "WeaponSpearTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier1",
+      "name": "Lance"
+    },
+    "PetrifyingRay": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Medusa",
+      "name": "Petrifying Gaze"
+    },
+    "Charm_LongerMobStagger": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_22",
+      "name": "Ebony Claw"
+    },
+    "GiantFist": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_Talos",
+      "name": "Fist of Talos"
+    },
+    "Detainment": {
+      "kind": "arcana",
+      "iconGuid": "28e0893a6d9745e44ab9892d72077d63",
+      "iconName": "T_UI_Items_Spells_Atlas_SaintLouis",
+      "name": "Chains of Justice"
+    },
+    "DoubleJump": {
+      "kind": "ability",
+      "iconGuid": "c3b03f3ba25cd4c4ea04a936f913539e",
+      "iconName": "PlayerStatus_VaniaIcons_DoubleJump",
+      "name": "Double Jump"
+    },
+    "WeaponAndShieldTier2": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_SwordShield_Tier2",
+      "name": "Fleuret and Tower Shield"
+    },
+    "WeaponSpearTier4": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_Spear_Tier4",
+      "name": "Chauve-Souris"
+    },
+    "Charm_BoostSpeedAfterWhip": {
+      "kind": "relic",
+      "iconGuid": "9fa14ae72f1781941ab83dbf27a7a291",
+      "iconName": "CharmsIcons_8",
+      "name": "Hollow Bone"
+    },
+    "WeaponDualWieldTier1": {
+      "kind": "weapon",
+      "iconGuid": "ffc3a523f7306e84b83f5d59217fe361",
+      "iconName": "WeaponInventory_WeaponsIcon_DualWield_Tier1",
+      "name": "Pair of Longswords"
     }
   },
   "reference": {
     "url": "https://www.gamerguides.com/castlevania-belmonts-curse/maps/paris",
-    "date": "2026-10-17",
-    "crossChecked": 639
+    "date": "2026-10-21",
+    "crossChecked": 693
   },
   "areas": [
     "World_Biome_01_Streets_Poor",
@@ -11773,15 +12125,15 @@
     "World_Biome_12_MQBadEnding"
   ],
   "roomsAudited": {
-    "World_Biome_12_MQBadEnding": 5,
-    "World_Biome_11_MasterQuarter": 9,
-    "World_Biome_10_HallOfMirrors": 42,
-    "World_Biome_09_ClockTower": 53,
-    "World_Biome_08_Library": 38,
-    "World_Biome_06_MainHall": 59,
-    "World_Biome_05_NotreDame": 42,
-    "World_Biome_03_Catacombs": 43,
+    "World_Biome_01_Streets_Poor": 50,
     "World_Biome_02_InnocentsCemetery": 43,
-    "World_Biome_01_Streets_Poor": 50
+    "World_Biome_03_Catacombs": 43,
+    "World_Biome_05_NotreDame": 42,
+    "World_Biome_06_MainHall": 59,
+    "World_Biome_08_Library": 38,
+    "World_Biome_09_ClockTower": 53,
+    "World_Biome_10_HallOfMirrors": 42,
+    "World_Biome_11_MasterQuarter": 9,
+    "World_Biome_12_MQBadEnding": 5
   }
 }
