@@ -2,6 +2,15 @@ namespace MapAssist;
 
 internal static class MarkerLabels
 {
+    internal static string Completion(PickupMarker marker, CollectionState state) => state switch
+    {
+        CollectionState.Collected => "Collected / found",
+        CollectionState.Unknown when marker.State == "unknown" => "Completion not tracked",
+        CollectionState.Unknown when marker.State == "observed" => "Read to mark as found",
+        CollectionState.Unknown => "Completion unknown",
+        _ => ""
+    };
+
     internal static string Category(MarkerKind kind) => kind switch
     {
         MarkerKind.Health => "Health upgrade", MarkerKind.Mana => "Mana upgrade",

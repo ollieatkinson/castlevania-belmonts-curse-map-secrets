@@ -71,6 +71,16 @@ internal sealed class ItemDefinition
 
 internal static class MarkerRules
 {
+    internal static bool IsSharedPrefabId(PickupMarker marker, string id) => marker.Category switch
+    {
+        MarkerKind.Experience => id == "bcc12ecd-555d-461f-a01f-d141c80e4761",
+        MarkerKind.Wall => id == "5ca47261-a8c9-4b7a-a5f2-52c00ff595c0",
+        _ => false
+    };
+
+    internal static string CollectionSaveId(PickupMarker marker, string? alias)
+        => !string.IsNullOrEmpty(alias) && !IsSharedPrefabId(marker, alias) ? alias! : marker.SaveId;
+
     internal static CollectionState ReadCollectionState(string? savedState, string key = "activated")
     {
         if (string.IsNullOrWhiteSpace(savedState)) return CollectionState.Uncollected;
