@@ -337,8 +337,8 @@ public sealed class MapOverlay : MonoBehaviour
         var title = MarkerLabels.Title(best.Pickup, Plugin.Catalog.Items);
         var category = MarkerLabels.Category(best.Kind);
         if (!best.Pickup.Verified) category += " · Approximate location";
-        if (best.Collected == CollectionState.Collected) category += " · Collected";
-        else if (best.Collected == CollectionState.Unknown) category += " · Completion unknown";
+        var completion = MarkerLabels.Completion(best.Pickup, best.Collected);
+        if (completion.Length > 0) category += " · " + completion;
         tooltip?.Show(title, category, anchor);
     }
 

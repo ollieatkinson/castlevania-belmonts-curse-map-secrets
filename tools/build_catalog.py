@@ -50,7 +50,12 @@ for room,r in sorted(ROOMS.items()):
    if 'AtkUp' in n:m['symbol']='attack'
    elif 'DefUp' in n:m['symbol']='defence'
   if save and n.startswith('GPE_EncounterGate_MainEntity'):add(r,'challenge',o['x'],o['y'],save=save,state='encounter',name='Combat room')
-  if save and n.startswith('GPE_DestructibleWall'):add(r,'wall',o['x'],o['y'],save=save,name='Breakable wall')
+  if save and n.startswith('GPE_DestructibleWall'):
+   actual=o.get('contextId','')
+   if not actual or actual==save:raise ValueError(f"Missing unique breakable-wall ID in {room}")
+   # Preserve marker IDs used by existing observation files, as for statues.
+   add(r,'wall',o['x'],o['y'],save=actual,name='Breakable wall',
+     uid=f"{room}:wall:{save}:{round(o['x'],2)}:{round(o['y'],2)}")
   for c in o['components']:
    if 'resetableSecretZone' in c:
     opt=not(c['resetableSecretZone'] or c['isSecretZoneNoSfx'] or c['secretZoneIndex'] in reset)

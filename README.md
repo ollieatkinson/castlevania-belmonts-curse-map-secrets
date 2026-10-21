@@ -40,9 +40,11 @@ Use key names such as `F4`, `Insert` or `M`. Set a shortcut to `None` to disable
 
 Experience statues have a separate toggle, off by default. Collected statues are hidden when **Hide collected / found** is enabled, including those collected before installing the mod.
 
+Native breakable walls also use their individual save IDs, so previously broken walls can be hidden without revisiting them.
+
 ## Known limits
 
-Some activities and hidden paths have no confirmed completion flag and may remain visible after finishing them. Uncertain locations are hidden unless you enable **Unverified locations**. Previously read lore may appear until revisited with the mod installed. Markers aren't filtered by your unlocked abilities.
+Some activities and hidden paths have no confirmed completion flag and may remain visible after finishing them, including on a 100% save. Their tooltip says **Completion not tracked**; **Hide collected / found** keeps them visible. **Completion unknown** means a marker has completion tracking but its current state could not be determined. Uncertain locations are hidden unless you enable **Unverified locations**. Previously read lore may appear until read again with the mod installed; tracked lore says **Read to mark as found**. Markers aren't filtered by your unlocked abilities.
 
 The mod doesn't change your game saves. The current marker catalog was checked against Steam build **25975867**, but other builds, including Xbox app on PC, can load without matching its DLL hash. This does not guarantee compatibility with every build. Startup logs the game's version and `GameAssembly.dll` SHA-256 in `BepInEx/LogOutput.log`; a different or unreadable hash does not block loading. Hooks and components load independently, and features fall back only when they fail. If collection or exploration filtering fails, markers remain visible and filtering is retried the next time you open the map. Include the log when reporting compatibility problems.
 

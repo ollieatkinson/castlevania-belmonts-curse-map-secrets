@@ -100,8 +100,8 @@ internal static class SaveState
     internal static void BindAlias(PickupMarker marker, string actualId)
     {
         // The prefab value is replaced by SavableIDContext during room setup.
-        // Never overwrite a statue's unique context ID with the shared prefab ID.
-        if (marker.Category == MarkerKind.Experience && actualId == "bcc12ecd-555d-461f-a01f-d141c80e4761") return;
+        // Never overwrite a unique context ID with a shared statue or wall ID.
+        if (MarkerRules.IsSharedPrefabId(marker, actualId)) return;
         if (string.IsNullOrEmpty(actualId) || actualId == marker.SaveId || aliases.GetValueOrDefault(marker.Id) == actualId) return;
         aliases[marker.Id] = actualId;
         observationsDirty = true;
@@ -144,7 +144,8 @@ internal static class SaveState
         if (!string.IsNullOrEmpty(marker.CharacterGuid) && absorbed.Contains(marker.CharacterGuid)) return CollectionState.Collected;
         if (!string.IsNullOrEmpty(marker.SaveId))
         {
-            var actualId = aliases.GetValueOrDefault(marker.Id, marker.SaveId);
+            // Old observation files may contain a shared prefab ID from room setup.
+            var actualId = MarkerRules.CollectionSaveId(marker, aliases.GetValueOrDefault(marker.Id));
             if (live.TryGetValue(marker.Room + ":" + actualId, out var collected)) return collected ? CollectionState.Collected : CollectionState.Uncollected;
             var save = SaveLogic.Get();
             if (!save) return CollectionState.Unknown;
