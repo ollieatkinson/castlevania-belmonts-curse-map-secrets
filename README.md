@@ -42,6 +42,8 @@ Experience statues have a separate toggle, off by default. Collected statues are
 
 Native breakable walls also use their individual save IDs, so previously broken walls can be hidden without revisiting them.
 
+Spirit ghosts that grant clues appear under **Clues**, at their interaction points. Clue markers hide after obtaining the corresponding clue when **Hide collected / found** is enabled.
+
 ## Known limits
 
 Some activities and hidden paths have no confirmed completion flag and may remain visible after finishing them, including on a 100% save. Their tooltip says **Completion not tracked**; **Hide collected / found** keeps them visible. **Completion unknown** means a marker has completion tracking but its current state could not be determined. Uncertain locations are hidden unless you enable **Unverified locations**. Previously read lore may appear until read again with the mod installed; tracked lore says **Read to mark as found**. Markers aren't filtered by your unlocked abilities.

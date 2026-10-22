@@ -15,7 +15,7 @@
   "markers": {
     "weapon": 25,
     "arcana": 18,
-    "clue": 39,
+    "clue": 41,
     "upgrade": 28,
     "challenge": 81,
     "experience": 147,
@@ -30,7 +30,7 @@
     "objective": 8,
     "puzzle": 18
   },
-  "native": 448,
+  "native": 450,
   "referenceLinked": {
     "wall": 53,
     "secret": 76,

@@ -98,6 +98,20 @@ for room,r in sorted(ROOMS.items()):
   rd=C[str(r['root']['worldRoomData']['roomData']['m_PathID'])]
   add(r,'keepsake',rd['_width']*12,rd['_height']*6.5,item=key,state='item',name=definitions[key]['name'],source='game-room')
   native_keys.add((room,key))
+# Resolver-driven clues (including spirit dialogue) point to the actual
+# interaction trigger. Preserve the old room marker's identity when moving it.
+for room,r in sorted(ROOMS.items()):
+ positioned=set()
+ for interaction in r.get('clueInteractions',[]):
+  item=interaction['itemId'];position=(item,round(interaction['x'],4),round(interaction['y'],4))
+  if position in positioned or item not in configs[room]['containedItemsID']:continue
+  positioned.add(position)
+  existing=next((m for m in markers if m['room']==room and m['itemId']==item and m['kind']=='clue'),None)
+  if existing is None:continue
+  if existing['source']=='game-room':
+   existing.update(x=position[1],y=position[2],source='game')
+  elif existing['x']!=position[1] or existing['y']!=position[2]:
+   add(r,'clue',position[1],position[2],item=item,state='item',name=definitions[item]['name'])
 # Prefer native pickup positions; guide-only categories retain an explicit confidence flag.
 reference=json.load(open(BASE/'map-assist-reference-matched.json'));all_reference=len(reference);linked=collections.Counter();uncertain=[]
 SECRET_BY_ROOM=collections.defaultdict(list)

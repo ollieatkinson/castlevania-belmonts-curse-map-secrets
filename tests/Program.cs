@@ -9,6 +9,17 @@ void Check(bool condition, string message)
 
 using var input = File.OpenRead(Path.Combine(AppContext.BaseDirectory, "markers.json"));
 var catalog = MarkerCatalog.Load(input);
+var spiritClue = catalog.Markers.Single(m => m.ItemId == "Clue_Ferryman_MissingCoins");
+Check(spiritClue.Category == MarkerKind.Clue && spiritClue.Source == "game" && spiritClue.Verified,
+    "The Hospital spirit must be a verified Clue marker at its interaction point.");
+Check(Math.Abs(spiritClue.X - -15.11f) < 0.01f && Math.Abs(spiritClue.Y - 35f) < 0.01f,
+    "Stolen Oboles must be at the spirit trigger, not the room centre.");
+Check(spiritClue.Id.EndsWith(":clue:Clue_Ferryman_MissingCoins:36:19.5") && spiritClue.State == "item",
+    "Moving the spirit clue must preserve marker identity and inventory completion tracking.");
+Check(catalog.Markers.Where(m => m.Category == MarkerKind.Clue).All(m => m.Source == "game"),
+    "Clues must use native interaction positions rather than room-centre placeholders.");
+Check(catalog.Markers.Count(m => m.ItemId == "Clue_Brauner_NotreDamePainting") == 2,
+    "Both interactions for the Notre-Dame painting clue must remain available.");
 const string wallPrefab = "5ca47261-a8c9-4b7a-a5f2-52c00ff595c0";
 const string statuePrefab = "bcc12ecd-555d-461f-a01f-d141c80e4761";
 var walls = catalog.Markers.Where(m => m.Category == MarkerKind.Wall && m.Source == "game").ToArray();
